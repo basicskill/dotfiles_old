@@ -10,7 +10,10 @@ nTab='file:///home/mladen/.config/startpage/startpage.html'
 ## Aliases for commands. The keys of the given dictionary are the
 ## aliases, while the values are the commands they map to.
 ## Type: Dict
-# c.aliases = {'w': 'session-save', 'q': 'quit', 'wq': 'quit --save'}
+c.aliases = {
+        'w': 'session-save', 'q': 'quit', 'wq': 'quit --save'
+
+}
 
 ## Time interval (in milliseconds) between auto-saves of
 ## config/cookies/etc.
@@ -1336,7 +1339,8 @@ c.url.default_page = '~/.config/startpage/startpage.html'
 ## Type: Dict
 c.url.searchengines = {
         'DEFAULT': 'https://duckduckgo.com/?q={}',
-        'gh': 'https://github.com/{}'
+        'gh': 'https://github.com/{}',
+        'yb': 'https://youtube.com/results?search_query={}'
 }
 
 ## Page(s) to open at the start.
@@ -1532,7 +1536,8 @@ config.bind('t', 'open -t')
 # config.bind('yT', 'yank title -s')
 # config.bind('yY', 'yank -s')
 # config.bind('yd', 'yank domain')
-# config.bind('yp', 'yank pretty-url')
+config.bind('yp', 'yank pretty-url')
+config.bind('yb', 'open https://www.youtube.com/') 
 # config.bind('yt', 'yank title')
 # config.bind('yy', 'yank')
 # config.bind('{{', 'navigate prev -t')

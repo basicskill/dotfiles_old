@@ -9,7 +9,7 @@
 ## Promenljive
 
 dir=~/dotfiles
-files="config/i3 config/qutebrowser config/startpage"
+files="config/i3 config/qutebrowser config/startpage Xdefaults"
 
 ## Linkovanje
 for file in $files; do
