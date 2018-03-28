@@ -6,7 +6,7 @@
 ## This is here so configs done via the GUI are still loaded.
 ## Remove it to not load settings done via the GUI.
 config.load_autoconfig()
-
+nTab='file:///home/mladen/.config/startpage/startpage.html'
 ## Aliases for commands. The keys of the given dictionary are the
 ## aliases, while the values are the commands they map to.
 ## Type: Dict
@@ -1335,13 +1335,13 @@ c.url.default_page = '~/.config/startpage/startpage.html'
 ## `:open google qutebrowser`.
 ## Type: Dict
 c.url.searchengines = {
-        'DEFAULT': 'https://duckduckgo.com/?q={}'
-#youtube
+        'DEFAULT': 'https://duckduckgo.com/?q={}',
+        'gh': 'https://github.com/{}'
 }
 
 ## Page(s) to open at the start.
 ## Type: List of FuzzyUrl, or FuzzyUrl
-# c.url.start_pages = ['https://start.duckduckgo.com']
+c.url.start_pages = ['file:///home/mladen/.config/startpage/startpage.html']
 
 ## URL parameters to strip with `:yank url`.
 ## Type: List of String
