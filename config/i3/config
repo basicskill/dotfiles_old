@@ -178,3 +178,6 @@ gaps inner 10
 
 # Lajsna
 new_window pixel 2
+
+# Caps -> Esc
+

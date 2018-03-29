@@ -1338,7 +1338,7 @@ c.url.default_page = '~/.config/startpage/startpage.html'
 ## `:open google qutebrowser`.
 ## Type: Dict
 c.url.searchengines = {
-        'DEFAULT': 'https://duckduckgo.com/?q={}',
+        'DEFAULT': 'https://google.com/search?q={}',
         'gh': 'https://github.com/{}',
         'yb': 'https://youtube.com/results?search_query={}'
 }
@@ -1439,7 +1439,6 @@ c.url.start_pages = ['file:///home/mladen/.config/startpage/startpage.html']
 # config.bind('?', 'set-cmd-text ?')
 # config.bind('@', 'run-macro')
 # config.bind('B', 'set-cmd-text -s :quickmark-load -t')
-# config.bind('D', 'tab-close -o')
 # config.bind('F', 'hint all tab')
 # config.bind('G', 'scroll-to-perc')
 # config.bind('H', 'back')
@@ -1466,7 +1465,8 @@ c.url.start_pages = ['file:///home/mladen/.config/startpage/startpage.html']
 # config.bind('b', 'set-cmd-text -s :quickmark-load')
 # config.bind('cd', 'download-clear')
 # config.bind('co', 'tab-only')
-# config.bind('d', 'tab-close')
+config.bind('D', 'tab-close')
+config.bind('d', 'hint')
 # config.bind('f', 'hint')
 # config.bind('g$', 'tab-focus -1')
 # config.bind('g0', 'tab-focus 1')
