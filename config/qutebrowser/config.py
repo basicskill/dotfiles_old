@@ -703,11 +703,11 @@ c.aliases = {
 ## Prompt the user for the download location. If set to false,
 ## `downloads.location.directory` will be used.
 ## Type: Bool
-# c.downloads.location.prompt = True
+c.downloads.location.prompt = True
 
 ## Remember the last used download directory.
 ## Type: Bool
-# c.downloads.location.remember = True
+c.downloads.location.remember = True
 
 ## What to display in the download filename input.
 ## Type: String
@@ -715,20 +715,20 @@ c.aliases = {
 ##   - path: Show only the download path.
 ##   - filename: Show only download filename.
 ##   - both: Show download path and filename.
-# c.downloads.location.suggestion = 'path'
+c.downloads.location.suggestion = 'path'
 
 ## Default program used to open downloads. If null, the default internal
 ## handler is used. Any `{}` in the string will be expanded to the
 ## filename, else the filename will be appended.
 ## Type: String
-# c.downloads.open_dispatcher = None
+c.downloads.open_dispatcher = None
 
 ## Where to show the downloaded files.
 ## Type: VerticalPosition
 ## Valid values:
 ##   - top
 ##   - bottom
-# c.downloads.position = 'top'
+c.downloads.position = 'top'
 
 ## Duration (in milliseconds) to wait before removing finished downloads.
 ## If set to -1, downloads are never removed.
@@ -877,11 +877,11 @@ c.aliases = {
 
 ## Hide unmatched hints in rapid mode.
 ## Type: Bool
-# c.hints.hide_unmatched_rapid_hints = True
+c.hints.hide_unmatched_rapid_hints = True
 
 ## Minimum number of characters used for hint strings.
 ## Type: Int
-# c.hints.min_chars = 1
+c.hints.min_chars = 1
 
 ## Mode to use for hints.
 ## Type: String
@@ -889,31 +889,31 @@ c.aliases = {
 ##   - number: Use numeric hints. (In this mode you can also type letters from the hinted element to filter and reduce the number of elements that are hinted.)
 ##   - letter: Use the characters in the `hints.chars` setting.
 ##   - word: Use hints words based on the html elements and the extra words.
-# c.hints.mode = 'letter'
+c.hints.mode = 'letter'
 
 ## Comma-separated list of regular expressions to use for 'next' links.
 ## Type: List of Regex
-# c.hints.next_regexes = ['\\bnext\\b', '\\bmore\\b', '\\bnewer\\b', '\\b[>→≫]\\b', '\\b(>>|»)\\b', '\\bcontinue\\b']
+c.hints.next_regexes = ['\\bnext\\b', '\\bmore\\b', '\\bnewer\\b', '\\b[>→≫]\\b', '\\b(>>|»)\\b', '\\bcontinue\\b']
 
 ## Comma-separated list of regular expressions to use for 'prev' links.
 ## Type: List of Regex
-# c.hints.prev_regexes = ['\\bprev(ious)?\\b', '\\bback\\b', '\\bolder\\b', '\\b[<←≪]\\b', '\\b(<<|«)\\b']
+c.hints.prev_regexes = ['\\bprev(ious)?\\b', '\\bback\\b', '\\bolder\\b', '\\b[<←≪]\\b', '\\b(<<|«)\\b']
 
 ## Scatter hint key chains (like Vimium) or not (like dwb). Ignored for
 ## number hints.
 ## Type: Bool
-# c.hints.scatter = True
+c.hints.scatter = True
 
 ## Make characters in hint strings uppercase.
 ## Type: Bool
-# c.hints.uppercase = False
+c.hints.uppercase = False
 
 ## Maximum time (in minutes) between two history items for them to be
 ## considered being from the same browsing session. Items with less time
 ## between them are grouped when being displayed in `:history`. Use -1 to
 ## disable separation.
 ## Type: Int
-# c.history_gap_interval = 30
+c.history_gap_interval = 30
 
 ## Which unbound keys to forward to the webview in normal mode.
 ## Type: String
@@ -921,39 +921,39 @@ c.aliases = {
 ##   - all: Forward all unbound keys.
 ##   - auto: Forward unbound non-alphanumeric keys.
 ##   - none: Don't forward any keys.
-# c.input.forward_unbound_keys = 'auto'
+c.input.forward_unbound_keys = 'auto'
 
 ## Enter insert mode if an editable element is clicked.
 ## Type: Bool
-# c.input.insert_mode.auto_enter = True
+c.input.insert_mode.auto_enter = True
 
 ## Leave insert mode if a non-editable element is clicked.
 ## Type: Bool
-# c.input.insert_mode.auto_leave = True
+c.input.insert_mode.auto_leave = True
 
 ## Automatically enter insert mode if an editable element is focused
 ## after loading the page.
 ## Type: Bool
-# c.input.insert_mode.auto_load = False
+c.input.insert_mode.auto_load = False
 
 ## Switch to insert mode when clicking flash and other plugins.
 ## Type: Bool
-# c.input.insert_mode.plugins = False
+c.input.insert_mode.plugins = False
 
 ## Include hyperlinks in the keyboard focus chain when tabbing.
 ## Type: Bool
-# c.input.links_included_in_focus_chain = True
+c.input.links_included_in_focus_chain = True
 
 ## Timeout (in milliseconds) for partially typed key bindings. If the
 ## current input forms only partial matches, the keystring will be
 ## cleared after this time.
 ## Type: Int
-# c.input.partial_timeout = 5000
+c.input.partial_timeout = 5000
 
 ## Enable Opera-like mouse rocker gestures. This disables the context
 ## menu.
 ## Type: Bool
-# c.input.rocker_gestures = False
+c.input.rocker_gestures = False
 
 ## Enable spatial navigation. Spatial navigation consists in the ability
 ## to navigate between focusable elements in a Web page, such as
@@ -962,27 +962,27 @@ c.aliases = {
 ## determine whether there is an element he might be trying to reach
 ## towards the right and which element he probably wants.
 ## Type: Bool
-# c.input.spatial_navigation = False
+c.input.spatial_navigation = False
 
 ## Keychains that shouldn't be shown in the keyhint dialog. Globs are
 ## supported, so `;*` will blacklist all keychains starting with `;`. Use
 ## `*` to disable keyhints.
 ## Type: List of String
-# c.keyhint.blacklist = []
+c.keyhint.blacklist = []
 
 ## Time (in milliseconds) from pressing a key to seeing the keyhint
 ## dialog.
 ## Type: Int
-# c.keyhint.delay = 500
+c.keyhint.delay = 500
 
 ## Rounding radius (in pixels) for the edges of the keyhint dialog.
 ## Type: Int
-# c.keyhint.radius = 6
+c.keyhint.radius = 6
 
 ## Duration (in milliseconds) to show messages in the statusbar for. Set
 ## to 0 to never clear messages.
 ## Type: Int
-# c.messages.timeout = 2000
+c.messages.timeout = 2000
 
 ## How to open links in an existing instance if a new one is launched.
 ## This happens when e.g. opening a link from a terminal. See
@@ -995,7 +995,7 @@ c.aliases = {
 ##   - tab-silent: Open a new tab in the existing window without activating the window.
 ##   - tab-bg-silent: Open a new background tab in the existing window without activating the window.
 ##   - window: Open in a new window.
-# c.new_instance_open_target = 'tab'
+c.new_instance_open_target = 'tab'
 
 ## Which window to choose when opening links as new tabs. When
 ## `new_instance_open_target` is not set to `window`, this is ignored.
@@ -1005,28 +1005,28 @@ c.aliases = {
 ##   - last-opened: Open new tabs in the last (newest) opened window.
 ##   - last-focused: Open new tabs in the most recently focused window.
 ##   - last-visible: Open new tabs in the most recently visible window.
-# c.new_instance_open_target_window = 'last-focused'
+c.new_instance_open_target_window = 'last-focused'
 
 ## Show a filebrowser in upload/download prompts.
 ## Type: Bool
-# c.prompt.filebrowser = True
+c.prompt.filebrowser = True
 
 ## Rounding radius (in pixels) for the edges of prompts.
 ## Type: Int
-# c.prompt.radius = 8
+c.prompt.radius = 8
 
 ## Additional arguments to pass to Qt, without leading `--`. With
 ## QtWebEngine, some Chromium arguments (see
 ## https://peter.sh/experiments/chromium-command-line-switches/ for a
 ## list) will work.
 ## Type: List of String
-# c.qt.args = []
+c.qt.args = []
 
 ## Force a Qt platform to use. This sets the `QT_QPA_PLATFORM`
 ## environment variable and is useful to force using the XCB plugin when
 ## running QtWebEngine on Wayland.
 ## Type: String
-# c.qt.force_platform = None
+c.qt.force_platform = None
 
 ## Force software rendering for QtWebEngine. This is needed for
 ## QtWebEngine to work with Nouveau drivers.
@@ -1038,16 +1038,16 @@ c.aliases = {
 ## as it can cause issues with some bitmap fonts. As an alternative to
 ## this, it's possible to set font sizes and the `zoom.default` setting.
 ## Type: Bool
-# c.qt.highdpi = False
+c.qt.highdpi = False
 
 ## Show a scrollbar.
 ## Type: Bool
-# c.scrolling.bar = False
+c.scrolling.bar = False
 
 ## Enable smooth scrolling for web pages. Note smooth scrolling does not
 ## work with the `:scroll-px` command.
 ## Type: Bool
-# c.scrolling.smooth = False
+c.scrolling.smooth = False
 
 ## When to find text on a page case-insensitively.
 ## Type: String
@@ -1055,12 +1055,12 @@ c.aliases = {
 ##   - always: Search case-insensitively.
 ##   - never: Search case-sensitively.
 ##   - smart: Search case-sensitively if there are capital characters.
-# c.search.ignore_case = 'smart'
+c.search.ignore_case = 'smart'
 
 ## Find text on a page incrementally, renewing the search for each typed
 ## character.
 ## Type: Bool
-# c.search.incremental = True
+c.search.incremental = True
 
 ## Name of the session to save by default. If this is set to null, the
 ## session which was last loaded is saved.
@@ -1340,7 +1340,9 @@ c.url.default_page = '~/.config/startpage/startpage.html'
 c.url.searchengines = {
         'DEFAULT': 'https://google.com/search?q={}',
         'gh': 'https://github.com/{}',
-        'yb': 'https://youtube.com/results?search_query={}'
+        'yt': 'https://youtube.com/results?search_query={}',
+        'aw': 'https://wiki.archlinux.org/index.php/{}',
+        'tpb': 'https://thepiratebay.org/index.php?q=b{}',
 }
 
 ## Page(s) to open at the start.
@@ -1465,8 +1467,10 @@ c.url.start_pages = ['file:///home/mladen/.config/startpage/startpage.html']
 # config.bind('b', 'set-cmd-text -s :quickmark-load')
 # config.bind('cd', 'download-clear')
 # config.bind('co', 'tab-only')
+# Moji bajndovi!
+config.bind('wa', 'open https://www.wolframalpha.com/')
 config.bind('D', 'tab-close')
-config.bind('d', 'hint')
+config.bind('dr', 'open https://drive.google.com/drive/my-drive')
 # config.bind('f', 'hint')
 # config.bind('g$', 'tab-focus -1')
 # config.bind('g0', 'tab-focus 1')
