@@ -9,7 +9,7 @@
 ## Promenljive
 
 dir=~/dotfiles
-files="config/i3 config/qutebrowser config/startpage Xdefaults Xmodmap"
+files="config/i3 config/qutebrowser config/startpage Xdefaults Xmodmap vimrc"
 
 ## Linkovanje
 for file in $files; do
