@@ -30,7 +30,7 @@
 *color15: #f1efee
 
 URxvt.intensityStyles:	true
-URxvt.background:       [30]#000000
+URxvt.background:       [90]#000000
 URxvt.depth:		32
 URxvt.font: 		xft:monospace:size=11
 URxvt.scrollBar:	false
@@ -52,6 +52,7 @@ URxvt.resize-font.bigger:	C-Up
 !! Matcher
 URxvt.url-launcher:	/usr/bin/xdg-open
 URxvt.matcher.button:	1
+!! Providnost
 
 rofi.color-enabled:	true
 rofi.color-window:	#000, #000, #000

@@ -3,8 +3,9 @@
 kb=`xkblayout-state print "%s"`
 if [ $kb = "us" ]; then
 	setxkbmap hr
+	xmodmap ~/.Xmodmap
 else
 	setxkbmap us
+	xmodmap ~/.Xmodmap
 fi
-xmodmap ~/.Xmodmap
 exit 0
