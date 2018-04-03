@@ -45,7 +45,7 @@ c.aliases = {
 ## when a key is bound (via `bindings.default` or `bindings.commands`),
 ## the mapping is ignored.
 ## Type: Dict
-# c.bindings.key_mappings = {'<Ctrl-[>': '<Escape>', '<Ctrl-6>': '<Ctrl-^>', '<Ctrl-M>': '<Return>', '<Ctrl-J>': '<Return>', '<Shift-Return>': '<Return>', '<Enter>': '<Return>', '<Shift-Enter>': '<Return>', '<Ctrl-Enter>': '<Ctrl-Return>'}
+c.bindings.key_mappings = {'<Ctrl-[>': '<Escape>', '<Ctrl-6>': '<Ctrl-^>', '<Ctrl-M>': '<Return>', '<Ctrl-J>': '<Return>', '<Shift-Return>': '<Return>', '<Enter>': '<Return>', '<Shift-Enter>': '<Return>', '<Ctrl-Enter>': '<Ctrl-Return>'}
 
 ## Background color of the completion widget category headers.
 ## Type: QssColor
@@ -1472,6 +1472,8 @@ config.bind('wa', 'open https://www.wolframalpha.com/')
 config.bind('D', 'tab-close')
 config.bind('d', 'unbound')
 config.bind('dr', 'open https://drive.google.com/drive/my-drive')
+config.bind('gj', 'tab-move -')
+config.bind('gk', 'tab-move +')
 # config.bind('f', 'hint')
 # config.bind('g$', 'tab-focus -1')
 # config.bind('g0', 'tab-focus 1')
@@ -1485,10 +1487,7 @@ config.bind('dr', 'open https://drive.google.com/drive/my-drive')
 # config.bind('gd', 'download')
 # config.bind('gf', 'view-source')
 # config.bind('gg', 'scroll-to-perc 0')
-# config.bind('gl', 'tab-move -')
-# config.bind('gm', 'tab-move')
 # config.bind('go', 'set-cmd-text :open {url:pretty}')
-# config.bind('gr', 'tab-move +')
 # config.bind('gt', 'set-cmd-text -s :buffer')
 # config.bind('gu', 'navigate up')
 # config.bind('h', 'scroll left')

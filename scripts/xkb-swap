@@ -1,0 +1,10 @@
+#! /bin/bash
+
+kb=`xkblayout-state print "%s"`
+if [ $kb = "us" ]; then
+	setxkbmap hr
+else
+	setxkbmap us
+fi
+xmodmap ~/.Xmodmap
+exit 0

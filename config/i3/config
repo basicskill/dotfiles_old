@@ -179,5 +179,8 @@ gaps inner 10
 # Lajsna
 new_window pixel 2
 
-# Caps -> Esc
+# Shutdown
+bindsym $Mod+X exec shutdown now
 
+# Promena tastature
+bindsym $Mod+q exec ~/.scripts/xkb-swap
