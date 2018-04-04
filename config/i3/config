@@ -171,7 +171,17 @@ mode "resize" {
 bar {
         status_command i3status
 }
+####################### Startup ######################
+# Desktop pozadina
+exec_always --no-startup-id feh --bg-scale wallpapers/wall
 
+# Compton
+exec_always --no-startup-id compton -b --config ~/.config/compton.conf
+
+# xbindkeys
+exec_always --no-startup-id xbindkeys
+
+####################### Bajndovi ######################
 # Brauzer
 bindsym $mod+b exec $browser 
 
