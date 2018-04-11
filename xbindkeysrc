@@ -1,9 +1,0 @@
-# Skrinshot
-"exec gnome-screenshot -a"
-	XF86WebCam
-"exec amixer -q sset Master unmute 5%+"
-	XF86AudioRaiseVolume
-"exec amixer -q sset Master unmute 5%-"
-	XF86AudioLowerVolume
-"exec amixer -q sset Master mute"
-	XF86AudioMute

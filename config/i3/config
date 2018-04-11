@@ -1,3 +1,11 @@
+# ──╔═══╗─────────╔═╗
+# ──║╔═╗║─────────║╔╝
+# ╔╗╚╝╔╝║╔══╦══╦═╦╝╚╦╦══╗
+# ╠╣╔╗╚╗║║╔═╣╔╗║╔╬╗╔╬╣╔╗║
+# ║║║╚═╝║║╚═╣╚╝║║║║║║║╚╝║
+# ╚╝╚═══╝╚══╩══╩╝╚╩╝╚╩═╗║
+# ───────────────────╔═╝║
+# ───────────────────╚══╝
 #font 
 font pango:DejaVu Sans Mono 8
 
@@ -124,7 +132,7 @@ bindsym $mod+Return exec $term
 bindsym $mod+b exec $browser 
 
 # Promena tastature
-bindsym $Mod+q exec ~/.scripts/xkb-swap
+bindsym $Mod+w exec ~/.scripts/xkb-swap
 
 # Ragner
 bindsym $Mod+r exec $term -e ranger
@@ -136,3 +144,9 @@ bindsym XF86WebCam exec gnome-screenshot -a
 bindsym XF86AudioRauseVolume exec amixer -q sset Master unmute 5%+
 bindsym XF86AudioLowerVolume exec amixer -q sset Master unmute 5%-
 bindsym XF86AudioMute exec amixer -q sset Master mute 
+
+#No gap
+bindsym F4 gaps inner current set 0; gaps outer current set 0
+#Gaps +-
+bindsym $Mod+s gaps inner current plus 5
+bindsym $Mod+Shift+s gaps inner current minus 5

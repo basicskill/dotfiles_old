@@ -323,27 +323,27 @@ c.bindings.key_mappings = {'<Ctrl-[>': '<Escape>', '<Ctrl-6>': '<Ctrl-^>', '<Ctr
 
 ## Background color of the tab bar.
 ## Type: QtColor
-# c.colors.tabs.bar.bg = '#555555'
+c.colors.tabs.bar.bg = '#555555'
 
 ## Background color of unselected even tabs.
 ## Type: QtColor
-# c.colors.tabs.even.bg = 'darkgrey'
+c.colors.tabs.even.bg = 'darkgrey'
 
 ## Foreground color of unselected even tabs.
 ## Type: QtColor
-# c.colors.tabs.even.fg = 'white'
+c.colors.tabs.even.fg = 'white'
 
 ## Color for the tab indicator on errors.
 ## Type: QtColor
-# c.colors.tabs.indicator.error = '#ff0000'
+c.colors.tabs.indicator.error = '#ff0000'
 
 ## Color gradient start for the tab indicator.
 ## Type: QtColor
-# c.colors.tabs.indicator.start = '#0000aa'
+c.colors.tabs.indicator.start = '#0000aa'
 
 ## Color gradient end for the tab indicator.
 ## Type: QtColor
-# c.colors.tabs.indicator.stop = '#00aa00'
+c.colors.tabs.indicator.stop = '#00aa00'
 
 ## Color gradient interpolation system for the tab indicator.
 ## Type: ColorSystem
@@ -356,11 +356,11 @@ c.bindings.key_mappings = {'<Ctrl-[>': '<Escape>', '<Ctrl-6>': '<Ctrl-^>', '<Ctr
 
 ## Background color of unselected odd tabs.
 ## Type: QtColor
-# c.colors.tabs.odd.bg = 'grey'
+c.colors.tabs.odd.bg = 'grey'
 
 ## Foreground color of unselected odd tabs.
 ## Type: QtColor
-# c.colors.tabs.odd.fg = 'white'
+c.colors.tabs.odd.fg = 'white'
 
 ## Background color of selected even tabs.
 ## Type: QtColor
@@ -1202,11 +1202,11 @@ c.search.incremental = True
 ##   - persist: Retain the current mode.
 ##   - restore: Restore previously saved mode.
 ##   - normal: Always revert to normal mode.
-# c.tabs.mode_on_change = 'normal'
+c.tabs.mode_on_change = 'normal'
 
 ## Switch between tabs using the mouse wheel.
 ## Type: Bool
-# c.tabs.mousewheel_switching = True
+c.tabs.mousewheel_switching = False
 
 ## Position of new tabs opened from another tab.
 ## Type: NewTabPosition
@@ -1224,7 +1224,7 @@ c.search.incremental = True
 ##   - next: After the current tab.
 ##   - first: At the beginning.
 ##   - last: At the end.
-# c.tabs.new_position.unrelated = 'last'
+c.tabs.new_position.unrelated = 'next'
 
 ## Padding (in pixels) around text for tabs.
 ## Type: Padding
@@ -1249,7 +1249,7 @@ c.search.incremental = True
 ##   - prev: Select the tab which came before the closed one (left in horizontal, above in vertical).
 ##   - next: Select the tab which came after the closed one (right in horizontal, below in vertical).
 ##   - last-used: Select the previously selected tab.
-# c.tabs.select_on_remove = 'next'
+c.tabs.select_on_remove = 'prev'
 
 ## When to show the tab bar.
 ## Type: String
@@ -1258,7 +1258,7 @@ c.search.incremental = True
 ##   - never: Always hide the tab bar.
 ##   - multiple: Hide the tab bar if only one tab is open.
 ##   - switching: Show the tab bar when switching tabs.
-# c.tabs.show = 'always'
+c.tabs.show = 'always'
 
 ## Duration (in milliseconds) to show the tab bar before hiding it when
 ## tabs.show is set to 'switching'.
@@ -1302,7 +1302,7 @@ c.search.incremental = True
 
 ## Wrap when changing tabs.
 ## Type: Bool
-# c.tabs.wrap = True
+c.tabs.wrap = True
 
 ## What search to start when something else than a URL is entered.
 ## Type: String
