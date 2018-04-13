@@ -140,8 +140,8 @@ bindsym $Mod+r exec $term -e ranger
 # Skrinshot
 bindsym XF86WebCam exec gnome-screenshot -a
 
-#Volume
-bindsym XF86AudioRauseVolume exec amixer -q sset Master unmute 5%+
+#zvuk
+bindsym XF86AudioRaiseVolume exec amixer -q sset Master unmute 5%+
 bindsym XF86AudioLowerVolume exec amixer -q sset Master unmute 5%-
 bindsym XF86AudioMute exec amixer -q sset Master mute 
 
