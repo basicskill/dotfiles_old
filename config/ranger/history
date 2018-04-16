@@ -1,1 +1,38 @@
+rename small-world.pdf
+rename kolca.pdf
+rename jjj.pdf
+rename 2d.pdf
+rename static.pdf
+rename static2.pdf
+rename static1.pdf
+rename neki-tool.pdf
+rename d2-VGraph.pdf
+rename d3.pdf
+rename nngapp1.pdf
+find s
+rename static3.pdf
+find 
+find mozi
+find fire
+rename jana.jpeg
+rename jana.png
+! mkdir evolucija
+!mkdir evolucija
+mkdir evolucija
+hidden
+hiden
+rename sjajna_lampa.docx
+rename nesto.docx
+rename nesto.pptx
+rename nos.jpg
+redraw_window 
+rename nos_r
+rename nos.png
+open_with r
+open_with 
+rename FIZIKA-1M.pdf
+rename FIZIKA-3M.pdf
+
 delete
+rename 
+bulkrename 

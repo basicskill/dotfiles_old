@@ -22,7 +22,7 @@ c.aliases = {
 
 ## Always restore open sites when qutebrowser is reopened.
 ## Type: Bool
-# c.auto_save.session = False
+c.auto_save.session = True
 
 ## Backend to use to display websites. qutebrowser supports two different
 ## web rendering engines / backends, QtWebKit and QtWebEngine. QtWebKit
@@ -1398,15 +1398,25 @@ c.url.start_pages = ['file:///home/mladen/.config/startpage/startpage.html']
 # config.bind(';r', 'hint --rapid links tab-bg')
 # config.bind(';t', 'hint inputs')
 # config.bind(';y', 'hint links yank')
-# config.bind('<Alt-1>', 'tab-focus 1')
-# config.bind('<Alt-2>', 'tab-focus 2')
-# config.bind('<Alt-3>', 'tab-focus 3')
-# config.bind('<Alt-4>', 'tab-focus 4')
-# config.bind('<Alt-5>', 'tab-focus 5')
-# config.bind('<Alt-6>', 'tab-focus 6')
-# config.bind('<Alt-7>', 'tab-focus 7')
-# config.bind('<Alt-8>', 'tab-focus 8')
-# config.bind('<Alt-9>', 'tab-focus -1')
+config.bind('<Alt-1>', 'tab-focus 1')
+config.bind('<Alt-2>', 'tab-focus 2')
+config.bind('<Alt-3>', 'tab-focus 3')
+config.bind('<Alt-4>', 'tab-focus 4')
+config.bind('<Alt-5>', 'tab-focus 5')
+config.bind('<Alt-6>', 'tab-focus 6')
+config.bind('<Alt-7>', 'tab-focus 7')
+config.bind('<Alt-8>', 'tab-focus 8')
+config.bind('<Alt-9>', 'tab-focus -1')
+# ALTernative
+config.bind('1', 'tab-focus 1')
+config.bind('2', 'tab-focus 2')
+config.bind('3', 'tab-focus 3')
+config.bind('4', 'tab-focus 4')
+config.bind('5', 'tab-focus 5')
+config.bind('6', 'tab-focus 6')
+config.bind('7', 'tab-focus 7')
+config.bind('8', 'tab-focus 8')
+config.bind('9', 'tab-focus -1')
 # config.bind('<Ctrl-A>', 'navigate increment')
 # config.bind('<Ctrl-Alt-p>', 'print')
 # config.bind('<Ctrl-B>', 'scroll-page 0 -1')
@@ -1465,16 +1475,18 @@ config.bind('J', 'tab-prev')
 # config.bind('`', 'enter-mode set_mark')
 # config.bind('ad', 'download-cancel')
 # config.bind('b', 'set-cmd-text -s :quickmark-load')
-# config.bind('cd', 'download-clear')
 # config.bind('co', 'tab-only')
-# Moji bajndovi!
+
+################## Moji bajndovi! #########################
 config.bind('wa', 'open https://www.wolframalpha.com/')
 config.bind('D', 'tab-close')
 config.bind('d', 'unbound')
 config.bind('dr', 'open https://drive.google.com/drive/my-drive')
 config.bind('gj', 'tab-move -')
 config.bind('gk', 'tab-move +')
-# config.bind('f', 'hint')
+config.bind('cd', 'download-clear')
+config.bind('f', 'hint')
+
 # config.bind('g$', 'tab-focus -1')
 # config.bind('g0', 'tab-focus 1')
 # config.bind('gB', 'set-cmd-text -s :bookmark-load -t')
@@ -1657,3 +1669,6 @@ config.bind('H', 'scroll down', mode='caret')
 # config.bind('<Return>', 'prompt-accept', mode='yesno')
 # config.bind('n', 'prompt-accept no', mode='yesno')
 # config.bind('y', 'prompt-accept yes', mode='yesno')
+
+# Sklanjanje bindova
+
