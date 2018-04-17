@@ -1,3 +1,5 @@
+" Vim
+set nu
 " Gajd
 " LaTeX
 	autocmd FileType tex noremap <F5> <Esc>:w\|!pdflatex<space><c-r>%<Enter><Enter>

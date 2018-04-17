@@ -33,6 +33,10 @@ open_with
 rename FIZIKA-1M.pdf
 rename FIZIKA-3M.pdf
 
-delete
 rename 
 bulkrename 
+rename FIZIKA-2M.pdf
+search css
+search dark
+w
+delete
