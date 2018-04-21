@@ -29,9 +29,9 @@ redraw_window
 rename nos_r
 rename nos.png
 open_with r
-open_with 
 rename FIZIKA-1M.pdf
 rename FIZIKA-3M.pdf
+
 rename 
 bulkrename 
 rename FIZIKA-2M.pdf
@@ -44,6 +44,7 @@ rename pokemon.jpg
 rename quake.png
 rename peace-and-love.png
 rename avijon.jpg
+rename wizardi.jpg
+open_with 
+open_with vim
 delete
-rename not-spam.png
-

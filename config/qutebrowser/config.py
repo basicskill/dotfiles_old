@@ -5,9 +5,7 @@ c.aliases = {
 
 }
 c.auto_save.session = True
-
 c.auto_save.interval = 15000 
-
 
 c.backend = 'webengine'
 
@@ -17,7 +15,7 @@ c.url.default_page = '~/.config/startpage/startpage.html'
 
 c.url.searchengines = {
         'DEFAULT': 'https://google.com/search?q={}',
-        'gh': 'https://github.com/{}',
+        'gh': 'https://github.com/search?q={}',
         'yt': 'https://youtube.com/results?search_query={}',
         'aw': 'https://wiki.archlinux.org/index.php/{}',
         'tpb': 'https://thepiratebay.org/index.php?q=b{}',

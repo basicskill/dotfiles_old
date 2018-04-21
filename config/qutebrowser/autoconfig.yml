@@ -9,7 +9,13 @@ settings:
         H: scroll down
         J: scroll left
       normal:
+        '''': enter-mode jump_mark
+        +: zoom-in
         ',n': config-cycle content.user_stylesheets night-fb.css "" ;; reload
+        '-': zoom-out
+        .: repeat-command
+        /: set-cmd-text /
+        '0': tab-focus -1
         '1': tab-focus 1
         '2': tab-focus 2
         '3': tab-focus 3
@@ -18,9 +24,19 @@ settings:
         '6': tab-focus 6
         '7': tab-focus 7
         '8': tab-focus 8
-        '9': tab-focus -1
-        <Alt+1>: tab-focus 1
-        <Alt+2>: tab-focus 2
+        '9': tab-focus 9
+        ':': 'set-cmd-text :'
+        ;I: hint images tab
+        ;R: hint --rapid links window
+        ;Y: hint links yank-primary
+        ;d: hint links download
+        ;f: hint all tab-fg
+        ;h: hint all hover
+        ;i: hint images
+        ;t: hint inputs
+        ;y: hint links yank
+        <Alt+1>: null
+        <Alt+2>: null
         <Alt+3>: tab-focus 3
         <Alt+4>: tab-focus 4
         <Alt+5>: tab-focus 5
@@ -28,19 +44,71 @@ settings:
         <Alt+7>: tab-focus 7
         <Alt+8>: tab-focus 8
         <Alt+9>: tab-focus -1
+        <Back>: back
+        <Ctrl+F5>: reload -f
+        <Ctrl+Return>: follow-selected -t
+        <Ctrl+Shift+n>: open -p
+        <Ctrl+Tab>: tab-focus last
+        <Ctrl+n>: open -w
+        <Ctrl+p>: tab-pin
+        <Ctrl+q>: quit
+        <Ctrl+v>: enter-mode passthrough
+        <Escape>: clear-keychain ;; search ;; fullscreen --leave
+        <F11>: fullscreen
+        <F5>: reload
+        <Forward>: forward
+        <Return>: follow-selected
+        '=': zoom
+        '?': help
+        '@': run-macro
         D: tab-close
+        F: hint all tab
+        H: back
         J: tab-prev
         K: tab-next
+        L: forward
+        N: search-prev
+        O: set-cmd-text -s :open -t
+        T: tab-move -1 ;; open -t
+        '`': enter-mode set_mark
+        ad: download-cancel
         cd: download-clear
+        co: tab-only
         d: unbound
         dr: open https://drive.google.com/drive/my-drive
         f: hint
+        gB: set-cmd-text -s :bookmark-load -t
+        gC: tab-clone
+        gd: download
+        gf: view-source
+        gg: scroll-to-perc 0
         gj: tab-move -
         gk: tab-move +
+        go: set-cmd-text :open {url:pretty}
+        h: scroll left
+        i: enter-mode insert
+        j: scroll down
+        k: scroll up
+        l: scroll right
         m: open https://www.facebook.com/messages/t/
-        t: open -t
+        n: search-next
+        o: set-cmd-text -s :open
+        q: record-macro
+        r: reload
+        sf: save
+        u: undo
+        v: enter-mode caret
+        wP: open -w -- {primary}
         wa: open https://www.wolframalpha.com/
+        wf: hint all window
+        wh: back -w
+        wp: open -w -- {clipboard}
+        yD: yank domain -s
+        yP: yank pretty-url -s
+        yT: yank title -s
+        yY: yank -s
         yb: open https://www.youtube.com/
+        yd: yank domain
         yp: yank pretty-url
   content.user_stylesheets:
     global: null
