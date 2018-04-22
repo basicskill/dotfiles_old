@@ -51,7 +51,7 @@ settings:
         <Ctrl+Tab>: tab-focus last
         <Ctrl+n>: open -w
         <Ctrl+p>: tab-pin
-        <Ctrl+q>: quit
+        <Ctrl+q>: wq
         <Ctrl+v>: enter-mode passthrough
         <Escape>: clear-keychain ;; search ;; fullscreen --leave
         <F11>: fullscreen
@@ -74,7 +74,7 @@ settings:
         ad: download-cancel
         cd: download-clear
         co: tab-only
-        d: unbound
+        d: null
         dr: open https://drive.google.com/drive/my-drive
         f: hint
         gB: set-cmd-text -s :bookmark-load -t
@@ -84,6 +84,7 @@ settings:
         gg: scroll-to-perc 0
         gj: tab-move -
         gk: tab-move +
+        gl: null
         go: set-cmd-text :open {url:pretty}
         h: scroll left
         i: enter-mode insert
@@ -96,6 +97,7 @@ settings:
         q: record-macro
         r: reload
         sf: save
+        t: open -t
         u: undo
         v: enter-mode caret
         wP: open -w -- {primary}

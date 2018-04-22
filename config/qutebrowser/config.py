@@ -31,12 +31,22 @@ c.url.start_pages = ['file:///home/mladen/.config/startpage/startpage.html']
 
 
 ## Bindings for normal mode
+
+## Specijalni
 config.bind("'", 'enter-mode jump_mark')
 config.bind('+', 'zoom-in')
 config.bind('-', 'zoom-out')
 config.bind('.', 'repeat-command')
 config.bind('/', 'set-cmd-text /')
 config.bind(':', 'set-cmd-text :')
+config.bind('=', 'zoom')
+config.bind('?', 'help')
+config.bind('@', 'run-macro')
+config.bind('`', 'enter-mode set_mark')
+config.bind('{{', 'navigate prev -t')
+config.bind('}}', 'navigate next -t')
+
+# Koma ;
 config.bind(';I', 'hint images tab')
 config.bind(';R', 'hint --rapid links window')
 config.bind(';Y', 'hint links yank-primary')
@@ -47,17 +57,13 @@ config.bind(';i', 'hint images')
 config.bind(';y', 'hint links yank')
 config.bind(';t', 'hint inputs')
 
+# Ctrl
 config.bind('<Ctrl-F5>', 'reload -f')
 config.bind('<Ctrl-N>', 'open -w')
-
-config.bind('<Ctrl-Q>', 'quit')
-
+config.bind('<Ctrl-Q>', 'wq')
 config.bind('<Ctrl-Return>', 'follow-selected -t')
 config.bind('<Ctrl-Shift-N>', 'open -p')
-
-config.bind('<Ctrl-Tab>', 'tab-focus last')
 config.bind('<Ctrl-V>', 'enter-mode passthrough')
-
 config.bind('<Ctrl-p>', 'tab-pin') # !!!
 
 config.bind('<Escape>', 'clear-keychain ;; search ;; fullscreen --leave')
@@ -67,23 +73,21 @@ config.bind('<Return>', 'follow-selected')
 config.bind('<back>', 'back')
 config.bind('<forward>', 'forward')
 
-config.bind('=', 'zoom')
-# config.bind('?', 'set-cmd-text ?')
-config.bind('?', 'help')
 
-config.bind('@', 'run-macro')
+# Slova
+config.bind('ad', 'download-cancel')
+config.bind('gm', 'open https://mail.google.com/mail/u/0/#inbox')
+
+
+
+
 config.bind('F', 'hint all tab')
 
 config.bind('N', 'search-prev')
 config.bind('O', 'set-cmd-text -s :open -t')
 
-# config.bind('R', 'reload -f')
 
-config.bind('`', 'enter-mode set_mark')
-config.bind('ad', 'download-cancel')
 config.bind('co', 'tab-only')
-
-################## Moji bajndovi! #########################
 config.bind('wa', 'open https://www.wolframalpha.com/')
 config.bind('D', 'tab-close')
 config.bind('d', 'unbound')
@@ -101,7 +105,6 @@ config.bind('J', 'tab-prev')
 config.bind('K', 'tab-next')
 config.bind('L', 'forward')
 
-# ALTernative
 config.bind('1', 'tab-focus 1')
 config.bind('2', 'tab-focus 2')
 config.bind('3', 'tab-focus 3')
@@ -147,11 +150,15 @@ config.bind('yY', 'yank -s')
 config.bind('yd', 'yank domain')
 config.bind('yp', 'yank pretty-url')
 config.bind('yb', 'open https://www.youtube.com/') 
-# config.bind('yt', 'yank title')
-# config.bind('yy', 'yank')
-# config.bind('{{', 'navigate prev -t')
-# config.bind('}}', 'navigate next -t')
+config.bind('Yb', 'open -t https://www.youtube.com/') 
+config.bind('YB', 'open -t https://www.youtube.com/') 
+config.bind('J', 'scroll left', mode='caret')
+config.bind('H', 'scroll down', mode='caret')
+config.bind('yy', 'yank')
+config.bind('yt', 'yank title')
 
+
+################ END ################ 
 ## Bindings for caret mode
 # config.bind('$', 'move-to-end-of-line', mode='caret')
 # config.bind('0', 'move-to-start-of-line', mode='caret')
@@ -160,8 +167,6 @@ config.bind('yb', 'open https://www.youtube.com/')
 # config.bind('<Return>', 'yank selection', mode='caret')
 # config.bind('<Space>', 'toggle-selection', mode='caret')
 # config.bind('G', 'move-to-end-of-document', mode='caret')
-config.bind('J', 'scroll left', mode='caret')
-config.bind('H', 'scroll down', mode='caret')
 # config.bind('K', 'scroll up', mode='caret')
 # config.bind('L', 'scroll right', mode='caret')
 # config.bind('Y', 'yank selection -s', mode='caret')
@@ -253,15 +258,14 @@ config.bind('H', 'scroll down', mode='caret')
 # config.bind('<Up>', 'prompt-item-focus prev', mode='prompt')
 
 ## Bindings for register mode
-# config.bind('<Escape>', 'leave-mode', mode='register')
+config.bind('<Escape>', 'leave-mode', mode='register')
 
 ## Bindings for yesno mode
-# config.bind('<Alt-Shift-Y>', 'prompt-yank --sel', mode='yesno')
-# config.bind('<Alt-Y>', 'prompt-yank', mode='yesno')
-# config.bind('<Escape>', 'leave-mode', mode='yesno')
-# config.bind('<Return>', 'prompt-accept', mode='yesno')
-# config.bind('n', 'prompt-accept no', mode='yesno')
-# config.bind('y', 'prompt-accept yes', mode='yesno')
+config.bind('<Alt-Shift-Y>', 'prompt-yank --sel', mode='yesno')
+config.bind('<Alt-Y>', 'prompt-yank', mode='yesno')
+config.bind('<Escape>', 'leave-mode', mode='yesno')
+config.bind('<Return>', 'prompt-accept', mode='yesno')
+config.bind('n', 'prompt-accept no', mode='yesno')
+config.bind('y', 'prompt-accept yes', mode='yesno')
 
-# Sklanjanje bindova
 
