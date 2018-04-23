@@ -13,3 +13,6 @@ alias vtop="vtop --theme brew"
 
 # Prompt
 export PS1='\[\033[00;32m\]\u\[\033[00;33m\]@\[\033[00;32m\]\h\[\033[01;30m\]:\[\033[01;36m\]\w\n\[\033[01;37m\]\$ \[\033[00m\]'
+
+# wal 
+(cat ~/.cache/wal/sequences &)

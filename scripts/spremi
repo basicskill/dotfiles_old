@@ -1,0 +1,22 @@
+#! /usr/bin/python3
+
+import sys
+fajl_name = sys.argv[1]
+with open('./' + fajl_name) as f:
+    sadrzaj = f.readlines()
+debug = 0
+linije = [x.strip() for x in sadrzaj]
+linije2 = []
+linije2.append('<br><hr><h3 style="text-align: justify; text-indent: 40px;">Ispitati i skicirati grafik funkcije \(f(x) = (x-1)^2(x-2)^3\)<br></h3>\n[[MORE]]<br><hr>')
+for line in linije:
+    while line != '' and line[-1] == '\\':   
+        line = line[0:-1]
+    if line != '' and line[0] == '#':
+        lajn = '<br><p class="normal">' + line[1:] + '</p>'
+    else:
+        lajn = '<br>\\[' + line + '\\]'
+    linije2.append(lajn)
+
+with open('./' + fajl_name + '_parsed' + '.html', 'w') as f:
+    for lajn in linije2:
+        f.write("%s\n" % lajn )

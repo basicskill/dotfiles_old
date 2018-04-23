@@ -109,6 +109,7 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Logout' -b 'Yes' 'i3-msg exi
 
 # Shutdown
 bindsym $Mod+Shift+End exec shutdown now
+bindsym $Mod+Shift+BackSpace exec reboot
 
 bar {
         status_command i3status

@@ -1,4 +1,3 @@
-rename small-world.pdf
 rename kolca.pdf
 rename jjj.pdf
 rename 2d.pdf
@@ -47,4 +46,5 @@ rename avijon.jpg
 rename wizardi.jpg
 open_with 
 open_with vim
+rename sva.png
 delete

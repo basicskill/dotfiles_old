@@ -24,6 +24,9 @@ c.url.searchengines = {
 
 c.url.start_pages = ['file:///home/mladen/.config/startpage/startpage.html']
 
+#~~~~~~~~~~~~~~~~~~~~~ Tabovi ~~~~~~~~~~~~~~~~~~~~~# 
+c.tabs.mousewheel_switching = False
+c.tabs.new_position.unrelated = 'next'
 
 
 #~~~~~~~~~~~~~~~~~~~~~ Bajndovi ~~~~~~~~~~~~~~~~~~~~~# 
