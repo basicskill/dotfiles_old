@@ -29,6 +29,8 @@ c.tabs.mousewheel_switching = False
 c.tabs.new_position.unrelated = 'next'
 
 
+#~~~~~~~~~~~~~~~~~~~~~ UNBajndovi ~~~~~~~~~~~~~~~~~~~~~# 
+config.unbind('d')
 #~~~~~~~~~~~~~~~~~~~~~ Bajndovi ~~~~~~~~~~~~~~~~~~~~~# 
 
 
