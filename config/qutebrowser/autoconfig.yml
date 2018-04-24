@@ -70,6 +70,8 @@ settings:
         N: search-prev
         O: set-cmd-text -s :open -t
         T: tab-move -1 ;; open -t
+        YB: open -t https://www.youtube.com/
+        Yb: open -t https://www.youtube.com/
         '`': enter-mode set_mark
         ad: download-cancel
         cd: download-clear
@@ -85,6 +87,7 @@ settings:
         gj: tab-move -
         gk: tab-move +
         gl: null
+        gm: open https://mail.google.com/mail/u/0/#inbox
         go: set-cmd-text :open {url:pretty}
         h: scroll left
         i: enter-mode insert
@@ -112,5 +115,18 @@ settings:
         yb: open https://www.youtube.com/
         yd: yank domain
         yp: yank pretty-url
+        yt: yank title
+        yy: yank
+        '{{': navigate prev -t
+        '}}': navigate next -t
+      register:
+        <Escape>: leave-mode
+      yesno:
+        <Alt+Shift+y>: prompt-yank --sel
+        <Alt+y>: prompt-yank
+        <Escape>: leave-mode
+        <Return>: prompt-accept
+        n: prompt-accept no
+        y: prompt-accept yes
   content.user_stylesheets:
     global: null

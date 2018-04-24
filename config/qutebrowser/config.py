@@ -83,6 +83,7 @@ config.bind('<forward>', 'forward')
 config.bind('ad', 'download-cancel')
 config.bind('gm', 'open https://mail.google.com/mail/u/0/#inbox')
 
+config.bind('wh', 'open https://web.whatsapp.com/')
 
 
 
@@ -95,7 +96,6 @@ config.bind('O', 'set-cmd-text -s :open -t')
 config.bind('co', 'tab-only')
 config.bind('wa', 'open https://www.wolframalpha.com/')
 config.bind('D', 'tab-close')
-config.bind('d', 'unbound')
 config.bind('dr', 'open https://drive.google.com/drive/my-drive')
 config.bind('gj', 'tab-move -')
 config.bind('gk', 'tab-move +')

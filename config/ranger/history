@@ -1,4 +1,3 @@
-rename static.pdf
 rename static2.pdf
 rename static1.pdf
 rename neki-tool.pdf
@@ -41,10 +40,11 @@ rename quake.png
 rename peace-and-love.png
 rename avijon.jpg
 rename wizardi.jpg
-open_with 
 open_with vim
 rename sva.png
-delete
 search .scrip
 rename wtf.png
 open_with h
+delete
+mkdir slike
+open_with 
