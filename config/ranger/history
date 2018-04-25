@@ -45,6 +45,6 @@ rename sva.png
 search .scrip
 rename wtf.png
 open_with h
-delete
 mkdir slike
 open_with 
+delete

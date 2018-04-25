@@ -9,10 +9,14 @@ fi
 # export SYSTEMD_PAGER=
 
 # User specific aliases and functions
-alias vtop="vtop --theme brew"
+alias ll="ls -alh --color"
+
+# Pacman
+alias pacman="sudo pacman"
 
 # Prompt
 export PS1='\[\033[00;32m\]\u\[\033[00;33m\]@\[\033[00;32m\]\h\[\033[01;30m\]:\[\033[01;36m\]\w\n\[\033[01;37m\]\$ \[\033[00m\]'
 
-# wal 
-(cat ~/.cache/wal/sequences &)
+export LANGUAGE=en_US.UTF-8
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8

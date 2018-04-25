@@ -1,18 +1,10 @@
-# ──╔═══╗─────────╔═╗
-# ──║╔═╗║─────────║╔╝
-# ╔╗╚╝╔╝║╔══╦══╦═╦╝╚╦╦══╗
-# ╠╣╔╗╚╗║║╔═╣╔╗║╔╬╗╔╬╣╔╗║
-# ║║║╚═╝║║╚═╣╚╝║║║║║║║╚╝║
-# ╚╝╚═══╝╚══╩══╩╝╚╩╝╚╩═╗║
-# ───────────────────╔═╝║
-# ───────────────────╚══╝
 #font 
 font pango:DejaVu Sans Mono 8
 
 ####################### promenljive  ######################
 set $mod Mod4
 set $browser qutebrowser
-set $term urxvt
+set $term urxvt 
 
 ####################### prozori  ######################
 # Gapovi
@@ -131,19 +123,19 @@ bindsym $mod+Return exec $term
 # Brauzer
 bindsym $mod+b exec $browser 
 
-# Promena tastature
+# Promena tastature !!!
 bindsym $Mod+w exec ~/.scripts/xkb-swap
 
-# Ragner
+# Ragner !!!
 bindsym $Mod+e exec $term -e ranger
 
-# Skrinshot
+# Skrinshot !!!
 bindsym XF86WebCam exec gnome-screenshot -a
 
-#zvuk
+#zvuk !!!
 bindsym XF86AudioRaiseVolume exec amixer -q sset Master unmute 5%+
 bindsym XF86AudioLowerVolume exec amixer -q sset Master unmute 5%-
-bindsym XF86AudioMute exec amixer -q sset Master mute 
+bindsym XF86AudioMute exec amixer -q sset Master 100% 
 
 bindsym F12 exec amixer -q sset Master unmute 5%+
 bindsym F11 exec amixer -q sset Master unmute 5%-
@@ -151,6 +143,8 @@ bindsym F10 exec amixer -q sset Master mute
 
 #No gap
 bindsym F4 gaps inner current set 0; gaps outer current set 0
+
 #Gaps +-
 bindsym $Mod+s gaps inner current plus 5
 bindsym $Mod+Shift+s gaps inner current minus 5
+
