@@ -94,17 +94,16 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 
 ####################### paljenje ######################
 # restart i3 inplace 
-bindsym $mod+Shift+r restart reload
+bindsym $mod+Shift+r exec pkill compton && xrdb ~/.Xdefaults;; restart reload 
 
 # Logout
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Logout' -b 'Yes' 'i3-msg exit'"
 
 # Shutdown
-bindsym $Mod+Shift+End exec shutdown now
-bindsym $Mod+Shift+BackSpace exec reboot
+bindsym $Mod+Shift+BackSpace exec ~/.scripts/logout $(echo -e "quit\nreboot" | dmenu -p "???")
 
 bar {
-        status_command i3status
+        status_command i3blocks
 }
 ####################### startap ######################
 # Desktop pozadina
@@ -126,20 +125,22 @@ bindsym $mod+b exec $browser
 # Promena tastature !!!
 bindsym $Mod+w exec ~/.scripts/xkb-swap
 
-# Ragner !!!
+# Ragner 
 bindsym $Mod+e exec $term -e ranger
 
-# Skrinshot !!!
-bindsym XF86WebCam exec gnome-screenshot -a
+# Skrinshot 
+bindsym XF86WebCam exec maim -s | xclip -selection clipboard -t image/png
 
-#zvuk !!!
+#zvuk 
 bindsym XF86AudioRaiseVolume exec amixer -q sset Master unmute 5%+
 bindsym XF86AudioLowerVolume exec amixer -q sset Master unmute 5%-
-bindsym XF86AudioMute exec amixer -q sset Master 100% 
+bindsym XF86AudioMute exec amixer -q sset Master unmute; exec  amixer -q sset Speaker unmute
 
 bindsym F12 exec amixer -q sset Master unmute 5%+
 bindsym F11 exec amixer -q sset Master unmute 5%-
 bindsym F10 exec amixer -q sset Master mute 
+
+bindsym $mod+n exec $term -e alsamixer
 
 #No gap
 bindsym F4 gaps inner current set 0; gaps outer current set 0
