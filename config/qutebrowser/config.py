@@ -20,6 +20,7 @@ c.url.searchengines = {
         'aw': 'https://wiki.archlinux.org/index.php/{}',
         'tpb': 'https://thepiratebay.org/index.php?q=b{}',
         '4': 'https://boards.4chan.org/{}/',
+		'tr': 'https://translate.google.com/#en/sr/{}',
 }
 
 c.url.start_pages = ['file:///home/mladen/.config/startpage/startpage.html']
@@ -272,5 +273,3 @@ config.bind('<Escape>', 'leave-mode', mode='yesno')
 config.bind('<Return>', 'prompt-accept', mode='yesno')
 config.bind('n', 'prompt-accept no', mode='yesno')
 config.bind('y', 'prompt-accept yes', mode='yesno')
-
-

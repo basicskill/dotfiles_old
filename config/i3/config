@@ -96,11 +96,8 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 # restart i3 inplace 
 bindsym $mod+Shift+r exec pkill compton && xrdb ~/.Xdefaults;; restart reload 
 
-# Logout
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Logout' -b 'Yes' 'i3-msg exit'"
-
 # Shutdown
-bindsym $Mod+Shift+BackSpace exec ~/.scripts/logout $(echo -e "quit\nreboot" | dmenu -p "???")
+bindsym $Mod+Shift+e exec ~/.scripts/logout $(echo -e "quit\nreboot\nexit" | dmenu)
 
 bar {
         status_command i3blocks
@@ -112,6 +109,12 @@ exec_always --no-startup-id feh --bg-scale wallpapers/wall
 # Compton
 exec_always --no-startup-id compton -b --config ~/.config/compton.conf
 
+# skrecped
+for_window [instance="updejt"] floating enable
+for_window [instance="updejt"] resize set 720 400
+for_window [instance="updejt"] move scratchpad
+for_window [instance="updejt"] border pixel 5
+exec --no-startup-id $term -name updejt -e tmux new -s updejt
 ####################### bajndovi ######################
 # start dmenu (a program launcher)
 bindsym $mod+d exec dmenu_run
@@ -148,4 +151,7 @@ bindsym F4 gaps inner current set 0; gaps outer current set 0
 #Gaps +-
 bindsym $Mod+s gaps inner current plus 5
 bindsym $Mod+Shift+s gaps inner current minus 5
+
+# Skrecped
+bindsym $mod+Shift+u [instance="updejt"] scratchpad show;[instance="updejt"] move position center
 

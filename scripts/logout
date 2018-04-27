@@ -4,4 +4,6 @@ if [ "$1" == "quit" ]; then
 	shutdown now
 elif [ $1 = "reboot" ]; then
 	reboot
+elif [ $1 = "exit" ]; then
+	i3-msg exit
 fi
