@@ -21,6 +21,7 @@ c.url.searchengines = {
         'tpb': 'https://thepiratebay.org/index.php?q=b{}',
         '4': 'https://boards.4chan.org/{}/',
 		'tr': 'https://translate.google.com/#en/sr/{}',
+		'sh': 'https://sci-hub.tw/{}',
 }
 
 c.url.start_pages = ['file:///home/mladen/.config/startpage/startpage.html']
