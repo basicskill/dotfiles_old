@@ -7,11 +7,17 @@ function Zameni()
 endfunction
 
 " Vim
+set nocompatible
+filetype off
+
 set nu
 set tabstop=4
+set shiftwidth=4
 set encoding=utf-8
 syntax on
 command Trans execute Zameni()
+
+" Vundle
 
 " Gajd
 nnoremap <tab> <Esc>/<++><Enter>c4l
@@ -35,5 +41,13 @@ vnoremap <C-c> "cy<Esc>:!echo -n '<C-R>c' \|<space>xclip<CR><Enter>
 	autocmd FileType tex inoremap ;ff \begin{figure}[t]<Enter>\includegraphics{}<Enter>\centering<Enter>\end{figure}<Esc>2k$i
 	autocmd FileType tex inoremap ;fw \begin{wrapfigure}{r}{\textwidth}<Enter>\centering<Enter>\includegraphics{}<Enter>\end{figure}<Esc>k$i
 
+	autocmd FileType tex vnoremap <c-b> \textbf{
+	autocmd FileType tex vnoremap <c-u> \underline{
+	autocmd FileType tex vnoremap <c-i> \textit{
+
 " Markdown
 	autocmd FileType md noremap <F3> <Esc>:w\|!pandoc<space><c-r>%<space>-t<space>beamer<space>-o<space>%.pdf<Enter><Enter>
+
+" Prolog <3 
+	autocmd FileType prolog noremap <F3> <Esc>:w\|!gprolog<space>--consult-file<space>%<Enter>
+	autocmd FileType prolog inoremap <c-i> mladen

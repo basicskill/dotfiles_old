@@ -62,7 +62,9 @@ config.bind(';f', 'hint all tab-fg')
 config.bind(';h', 'hint all hover')
 config.bind(';i', 'hint images')
 config.bind(';y', 'hint links yank')
+
 config.bind(';t', 'hint inputs')
+config.bind('>', 'hint inputs')
 
 # Ctrl
 config.bind('<Ctrl-F5>', 'reload -f')
@@ -93,6 +95,8 @@ config.bind('F', 'hint all tab')
 
 config.bind('N', 'search-prev')
 config.bind('O', 'set-cmd-text -s :open -t')
+
+config.bind('gi', 'open https://www.instagram.com/?hl=en')
 
 
 config.bind('co', 'tab-only')
