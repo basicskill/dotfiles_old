@@ -4,7 +4,7 @@ font pango:DejaVu Sans Mono 8
 ####################### promenljive  ######################
 set $mod Mod4
 set $browser qutebrowser
-set $term urxvt 
+set $term urxvt -bc -uc
 
 ####################### prozori  ######################
 # Gapovi
@@ -111,10 +111,11 @@ exec_always --no-startup-id compton -b --config ~/.config/compton.conf
 
 # skrecped
 for_window [instance="updejt"] floating enable
-for_window [instance="updejt"] resize set 720 400
+for_window [instance="updejt"] resize set 920 550
 for_window [instance="updejt"] move scratchpad
 for_window [instance="updejt"] border pixel 5
 exec --no-startup-id $term -name updejt -e tmux new -s updejt
+
 ####################### bajndovi ######################
 # start dmenu (a program launcher)
 bindsym $mod+d exec dmenu_run

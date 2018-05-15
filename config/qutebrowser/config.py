@@ -82,12 +82,39 @@ config.bind('<Return>', 'follow-selected')
 config.bind('<back>', 'back')
 config.bind('<forward>', 'forward')
 
+# g
+config.bind('gj', 'tab-move -')
+config.bind('gk', 'tab-move +')
+config.bind('gB', 'set-cmd-text -s :bookmark-load -t')
+config.bind('gC', 'tab-clone')
+config.bind('gf', 'view-source')
+config.bind('gg', 'scroll-to-perc 0')
+config.bind('go', 'set-cmd-text :open {url:pretty}')
+
+config.bind('gM', 'open https://mail.google.com/mail/u/0/#inbox')
+config.bind('gm', 'open https://www.facebook.com/messages/t/')
+config.bind('gi', 'open https://www.instagram.com/?hl=en')
+config.bind('gd', 'open https://drive.google.com/drive/my-drive')
+config.bind('gw', 'open https://web.whatsapp.com/')
+config.bind('gy', 'open https://www.youtube.com/') 
+
+# G (ruzno!!)
+config.bind('gtM', 'open -t https://mail.google.com/mail/u/0/#inbox')
+config.bind('gtm', 'open -t https://www.facebook.com/messages/t/')
+config.bind('gti', 'open -t https://www.instagram.com/?hl=en')
+config.bind('gtd', 'open -t https://drive.google.com/drive/my-drive')
+config.bind('gtw', 'open -t https://web.whatsapp.com/')
+config.bind('gty', 'open -t https://www.youtube.com/') 
+
+
+config.bind('wa', 'open https://www.wolframalpha.com/') # !!!
+
+config.bind('Yb', 'open -t https://www.youtube.com/') 
+config.bind('YB', 'open -t https://www.youtube.com/') 
 
 # Slova
 config.bind('ad', 'download-cancel')
-config.bind('gm', 'open https://mail.google.com/mail/u/0/#inbox')
-
-config.bind('wh', 'open https://web.whatsapp.com/')
+config.bind('dw', 'download') # !!!!
 
 
 
@@ -96,19 +123,13 @@ config.bind('F', 'hint all tab')
 config.bind('N', 'search-prev')
 config.bind('O', 'set-cmd-text -s :open -t')
 
-config.bind('gi', 'open https://www.instagram.com/?hl=en')
 
 
 config.bind('co', 'tab-only')
-config.bind('wa', 'open https://www.wolframalpha.com/')
 config.bind('D', 'tab-close')
-config.bind('dr', 'open https://drive.google.com/drive/my-drive')
-config.bind('gj', 'tab-move -')
-config.bind('gk', 'tab-move +')
 config.bind('cd', 'download-clear')
 config.bind('f', 'hint')
 config.bind('T', 'tab-move -1 ;; open -t')
-config.bind('m', 'open https://www.facebook.com/messages/t/')
 config.bind('t', 'open -t')
 
 config.bind('H', 'back')
@@ -127,8 +148,6 @@ config.bind('8', 'tab-focus 8')
 config.bind('9', 'tab-focus 9')
 config.bind('0', 'tab-focus -1')
 
-config.bind('gB', 'set-cmd-text -s :bookmark-load -t')
-config.bind('gC', 'tab-clone')
 config.bind('h', 'scroll left')
 config.bind('i', 'enter-mode insert')
 config.bind('j', 'scroll down')
@@ -137,10 +156,6 @@ config.bind('l', 'scroll right')
 config.bind('n', 'search-next')
 config.bind('o', 'set-cmd-text -s :open')
 
-config.bind('gd', 'download') # !!!!
-config.bind('gf', 'view-source')
-config.bind('gg', 'scroll-to-perc 0')
-config.bind('go', 'set-cmd-text :open {url:pretty}')
 
 config.bind('q', 'record-macro')
 config.bind('r', 'reload')
@@ -160,9 +175,6 @@ config.bind('yT', 'yank title -s')
 config.bind('yY', 'yank -s')
 config.bind('yd', 'yank domain')
 config.bind('yp', 'yank pretty-url')
-config.bind('yb', 'open https://www.youtube.com/') 
-config.bind('Yb', 'open -t https://www.youtube.com/') 
-config.bind('YB', 'open -t https://www.youtube.com/') 
 config.bind('J', 'scroll left', mode='caret')
 config.bind('H', 'scroll down', mode='caret')
 config.bind('yy', 'yank')

@@ -1,15 +1,3 @@
-find fire
-rename jana.jpeg
-rename jana.png
-! mkdir evolucija
-!mkdir evolucija
-mkdir evolucija
-hidden
-hiden
-rename sjajna_lampa.docx
-rename nesto.docx
-rename nesto.pptx
-rename nos.jpg
 redraw_window 
 rename nos_r
 rename nos.png
@@ -45,6 +33,18 @@ rename adasd
 rename zzr.jpg
 rename IMG-20180505-WA0000.jpg
 shell cp ~/Documents/templejt.tex temp.tex
-delete
 rename 
 bulkrename 
+cd genetski-algoritam-v0.2.pdf
+jjjkh
+rename genetski-algoritam-v0.2.pdf
+rename verzije-maturski
+rename gen-doktorat
+rename aerodinamika.pdf
+mkdir nepotrebni
+rename prolecni.pdf
+rename novi-predlog.pdf
+rename predlog-v1.1.pdf
+open_with ncmpcpp
+mkdir Music
+delete
