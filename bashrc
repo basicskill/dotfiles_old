@@ -10,8 +10,11 @@ export PATH=~/.scripts:$PATH
 
 # User specific aliases and functions
 alias ll="ls -alh --color"
+alias ls="ls -lh --color"
 alias v="vim"
 alias sv="sudo vim"
+alias p="python"
+alias sp="sudo python"
 
 # Sudo
 alias pacman="sudo pacman"
@@ -20,8 +23,9 @@ alias pip="sudo pip"
 alias mount="sudo mount"
 alias umount="sudo umount"
 
-# ne Sudo
+# telefon
 alias telefon="simple-mtpfs"
+alias utelefon="fusermount -u"
 
 # Prompt
 export PS1='\[\033[00;32m\]\u\[\033[00;33m\]@\[\033[00;32m\]\h\[\033[01;30m\]:\[\033[01;36m\]\w\n\[\033[01;37m\]\$ \[\033[00m\]'
@@ -34,3 +38,8 @@ export LC_ALL=en_US.UTF-8
 # Auto complete
 complete -cf sudo 
 complete -c man
+
+# zika
+alias muzika="ncmpcpp"
+#
+export VISUAL="vim"

@@ -1,0 +1,22 @@
+#!/bin/sh
+
+# Gives a dmenu prompt to mount unmounted drives.
+# If they're in /etc/fstab, they'll be mounted automatically.
+# Otherwise, you'll be prompted to give a mountpoint from already existsing directories.
+# If you input a novel directory, it will prompt you to create that directory.
+
+pgrep -x dmenu && exit
+
+mountable=$(lsblk -lp -o name,size,type,mountpoint,label | grep part | grep -v "t /" | grep -v "SWAP" | awk '{print $4, "(" $2 ")", $1}')
+[[ "$mountable" = "" ]] && exit 1
+chosen=$(echo "$mountable" | dmenu -i -p "Mount which drive?" | awk '{print $3}')
+echo $chosen
+[[ "$chosen" = "" ]] && exit 1
+sudo mount "$chosen" && exit 0
+label=$(lsblk $chosen -pl -o label)
+mountpoint=~/${label: 6}
+[[ "$mountpoint" = "" ]] && exit 1
+if [[ ! -d "$mountpoint" ]]; then
+	mkdir -p $mountpoint
+fi
+sudo mount -o rw,users,umask=000 $chosen $mountpoint 

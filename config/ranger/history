@@ -1,40 +1,13 @@
-redraw_window 
-rename nos_r
-rename nos.png
-open_with r
-rename FIZIKA-1M.pdf
-rename FIZIKA-3M.pdf
-rename FIZIKA-2M.pdf
-search css
-search dark
-w
-rename psilocybin.png
-rename oko.png
-rename pokemon.jpg
-rename quake.png
-rename peace-and-love.png
-rename avijon.jpg
-rename wizardi.jpg
-open_with vim
-rename sva.png
-search .scrip
-rename wtf.png
-open_with h
-mkdir slike
 shell mkdir fuzyy
 rename static-neural.pdf
-
 mkdir prezentacija
 mkdir ekspl
-open_with 
 open_with scim
 shell cp ~/Documents/templejt.tex sperg.tex
 rename adasd
 rename zzr.jpg
 rename IMG-20180505-WA0000.jpg
 shell cp ~/Documents/templejt.tex temp.tex
-rename 
-bulkrename 
 cd genetski-algoritam-v0.2.pdf
 jjjkh
 rename genetski-algoritam-v0.2.pdf
@@ -47,4 +20,31 @@ rename novi-predlog.pdf
 rename predlog-v1.1.pdf
 open_with ncmpcpp
 mkdir Music
+rename .dotfiles/
+search font
+search mpd
+shell cp ~/Documents/templejt.tex formule.tex
+rename problem-dve-lepe-koverte.html
+rename problem-dve-koverte-v1.1.html
+rename yt_downloader.py
+search scri
+bulkrename 
+mkdir -p Goblini/Binarni svet
+rename Goblini
+search dot
+search block
+
+mkdir jpeterson
+search jpe
+search ncm
+search scr
+bulkrename<C-r>
+bulkrename
+rename 
+rename templejt.tex
+search i3
+search 
+search scripl
+open_with 
+find f
 delete

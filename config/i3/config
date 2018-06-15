@@ -5,12 +5,13 @@ font pango:DejaVu Sans Mono 8
 set $mod Mod4
 set $browser qutebrowser
 set $term urxvt -bc -uc
+set $muzika ncmpcpp
 
 ####################### prozori  ######################
 # Gapovi
 gaps inner 10
 
-# Lajsna
+# lajsna
 new_window pixel 2
 
 # change focus
@@ -55,6 +56,8 @@ bindsym $mod+c split h
 # vertihalno deljenje
 bindsym $mod+v split v
 
+#client.focused #000000 #aaa555 #aaa555 
+
 ####################### workspace  ######################
 # We use variables to avoid repeating the names in multiple places.
 set $ws1 "1"
@@ -66,7 +69,7 @@ set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
-set $ws10 "10"
+set $ws10 "A"
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -101,6 +104,10 @@ bindsym $Mod+Shift+e exec iskljuci $(echo -e "quit\nreboot\nexit" | dmenu)
 
 bar {
         status_command i3blocks
+	colors {
+		focused_workspace #777777 #000000 #ccc555
+		inactive_workspace #000000 #000000 #ccc555
+	}
 }
 ####################### startap ######################
 # Desktop pozadina
@@ -108,13 +115,19 @@ exec_always --no-startup-id feh --bg-scale wallpapers/wall
 
 # Compton
 exec_always --no-startup-id compton -b --config ~/.config/compton.conf
+# mpd
+exec_always --no-startup-id mpd
+# r rate
+exec_always --no-startup-id xset r rate 250 30
 
 # skrecped
+# updejt
 for_window [instance="updejt"] floating enable
 for_window [instance="updejt"] resize set 920 550
 for_window [instance="updejt"] move scratchpad
 for_window [instance="updejt"] border pixel 5
 exec --no-startup-id $term -name updejt -e tmux new -s updejt
+
 
 ####################### bajndovi ######################
 # start dmenu (a program launcher)
@@ -148,7 +161,7 @@ bindsym F12 exec amixer -q sset Master unmute 1%+
 bindsym F11 exec amixer -q sset Master unmute 1%-
 bindsym F10 exec amixer -q sset Master mute 
 
-bindsym $mod+m exec $term -e alsamixer
+bindsym $mod+n exec $term -e alsamixer
 
 #No gap
 bindsym F4 gaps inner current set 0; gaps outer current set 0
@@ -157,5 +170,11 @@ bindsym F4 gaps inner current set 0; gaps outer current set 0
 bindsym $Mod+s gaps inner current plus 5
 bindsym $Mod+Shift+s gaps inner current minus 5
 
+# muzika
+bindsym $mod+m exec $term -e $muzika
+
 # Skrecped
 bindsym $mod+Shift+u [instance="updejt"] scratchpad show;[instance="updejt"] move position center
+
+# mountovanje
+bindsym F9 exec dmenumount

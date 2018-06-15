@@ -1,0 +1,44 @@
+#! /usr/bin/python
+
+from mutagen.mp3 import MP3
+from mutagen.easyid3 import EasyID3
+import mutagen.id3 
+from mutagen.id3 import ID3, APIC
+import os 
+
+path = os.getcwd().split('/')
+album = path[-1]
+artist = path[-2]
+slika = '../../src/' + artist + album + '.jpg'
+print(slika)
+
+for pesma in os.listdir():
+    audio = MP3(pesma, ID3=EasyID3)
+    try:
+        audio.add_tags(ID3=EasyID3)
+    except mutagen.id3.error:
+        pass
+
+    
+    delovi = pesma.split('.')
+    audio['album'] = album
+    audio['artist'] = artist
+    audio['title'] = delovi[1]
+    audio['tracknumber'] = delovi[0]
+    audio.save()
+
+    audio = ID3(pesma)
+    try:
+        with open(slika, 'rb') as cover:
+            audio['APIC'] = APIC(
+                encoding=3,
+                mime='image/jpeg',
+                type=3, desc=u'Cover',
+                data=albumart.read()
+            )
+        audio.save()
+    except:
+        print("Pesma: {} tagovana, bez slike!!".format(pesma))
+        continue
+                
+    print("Pesma: {} tagovana!".format(pesma))

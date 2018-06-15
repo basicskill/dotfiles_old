@@ -1,4 +1,15 @@
 config.load_autoconfig()
+
+c.downloads.position = 'bottom'
+#c.content.user_stylesheets = '~/dark.css'
+# pametne stvari: quantum-vim, mps-youtube, neovim
+# nord boje
+# https://github.com/szorfein/dotfiles
+
+
+
+
+
 nTab='file:///home/mladen/.config/startpage/startpage.html'
 c.aliases = {
         'w': 'session-save', 'q': 'quit', 'wq': 'quit --save'
@@ -14,14 +25,16 @@ c.tabs.wrap = True
 c.url.default_page = '~/.config/startpage/startpage.html'
 
 c.url.searchengines = {
-        'DEFAULT': 'https://google.com/search?q={}',
-        'gh': 'https://github.com/search?q={}',
-        'yt': 'https://youtube.com/results?search_query={}',
-        'aw': 'https://wiki.archlinux.org/index.php/{}',
-        'tpb': 'https://thepiratebay.org/index.php?q=b{}',
-        '4': 'https://boards.4chan.org/{}/',
-		'tr': 'https://translate.google.com/#en/sr/{}',
-		'sh': 'https://sci-hub.tw/{}',
+        'DEFAULT' :    'https://google.com/search?q={}',
+        'gh'      :    'https://github.com/search?q={}',
+        'yt'      :    'https://youtube.com/results?search_query={}',
+        'aw'      :    'https://wiki.archlinux.org/index.php/{}',
+        'tpb'     :    'https://thepiratebay.org/index.php?q=b{}',
+        '4'       :    'https://boards.4chan.org/{}/',
+        'tr'      :    'https://translate.google.com/#en/sr/{}',
+        'sh'      :    'https://sci-hub.tw/{}',
+        'r'       :    'https://www.reddit.com/r/{}',
+        'wa'      :    'https://www.wolframalpha.com/input/?i={}',
 }
 
 c.url.start_pages = ['file:///home/mladen/.config/startpage/startpage.html']
@@ -33,6 +46,7 @@ c.tabs.new_position.unrelated = 'next'
 
 #~~~~~~~~~~~~~~~~~~~~~ UNBajndovi ~~~~~~~~~~~~~~~~~~~~~# 
 config.unbind('d')
+config.unbind('m')
 #~~~~~~~~~~~~~~~~~~~~~ Bajndovi ~~~~~~~~~~~~~~~~~~~~~# 
 
 
@@ -65,6 +79,7 @@ config.bind(';y', 'hint links yank')
 
 config.bind(';t', 'hint inputs')
 config.bind('>', 'hint inputs')
+config.bind('I', 'hint inputs ;; a')
 
 # Ctrl
 config.bind('<Ctrl-F5>', 'reload -f')
@@ -91,9 +106,9 @@ config.bind('gf', 'view-source')
 config.bind('gg', 'scroll-to-perc 0')
 config.bind('go', 'set-cmd-text :open {url:pretty}')
 
-config.bind('gM', 'open https://mail.google.com/mail/u/0/#inbox')
+config.bind('ge', 'open https://mail.google.com/mail/u/0/#inbox')
 config.bind('gm', 'open https://www.facebook.com/messages/t/')
-config.bind('gi', 'open https://www.instagram.com/?hl=en')
+#config.bind('gi', 'open https://www.instagram.com/?hl=en')
 config.bind('gd', 'open https://drive.google.com/drive/my-drive')
 config.bind('gw', 'open https://web.whatsapp.com/')
 config.bind('gy', 'open https://www.youtube.com/') 
@@ -115,7 +130,6 @@ config.bind('YB', 'open -t https://www.youtube.com/')
 # Slova
 config.bind('ad', 'download-cancel')
 config.bind('dw', 'download') # !!!!
-
 
 
 config.bind('F', 'hint all tab')

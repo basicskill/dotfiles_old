@@ -1,0 +1,7 @@
+#! /bin/bash
+
+orig=/tmp/telefon
+lk=~/telefon
+mkdir $orig
+simple-mtpfs $orig
+ln -s $orig $lk

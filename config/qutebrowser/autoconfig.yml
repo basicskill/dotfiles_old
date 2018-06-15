@@ -59,6 +59,7 @@ settings:
         <Forward>: forward
         <Return>: follow-selected
         '=': zoom
+        '>': hint inputs
         '?': help
         '@': run-macro
         D: tab-close
@@ -78,23 +79,32 @@ settings:
         co: tab-only
         d: null
         dr: open https://drive.google.com/drive/my-drive
+        dw: download
         f: hint
         gB: set-cmd-text -s :bookmark-load -t
         gC: tab-clone
-        gd: download
+        gd: open https://drive.google.com/drive/my-drive
+        ge: open https://mail.google.com/mail/u/0/#inbox
         gf: view-source
         gg: scroll-to-perc 0
         gj: tab-move -
         gk: tab-move +
         gl: null
-        gm: open https://mail.google.com/mail/u/0/#inbox
+        gm: open https://www.facebook.com/messages/t/
         go: set-cmd-text :open {url:pretty}
+        gtM: open -t https://mail.google.com/mail/u/0/#inbox
+        gtd: open -t https://drive.google.com/drive/my-drive
+        gti: open -t https://www.instagram.com/?hl=en
+        gtm: open -t https://www.facebook.com/messages/t/
+        gtw: open -t https://web.whatsapp.com/
+        gty: open -t https://www.youtube.com/
+        gw: open https://web.whatsapp.com/
+        gy: open https://www.youtube.com/
         h: scroll left
         i: enter-mode insert
         j: scroll down
         k: scroll up
         l: scroll right
-        m: open https://www.facebook.com/messages/t/
         n: search-next
         o: set-cmd-text -s :open
         q: record-macro

@@ -23,6 +23,7 @@ path="$1"    # Full path of the selected file
 width="$2"   # Width of the preview pane (number of fitting characters)
 height="$3"  # Height of the preview pane (number of fitting characters)
 cached="$4"  # Path that should be used to cache image previews
+preview_images="$5"
 
 maxln=200    # Stop after $maxln lines.  Can be used like ls | head -n $maxln
 
@@ -43,6 +44,13 @@ trim() { head -n "$maxln"; }
 
 # wraps highlight to treat exit code 141 (killed by SIGPIPE) as success
 highlight() { command highlight "$@"; test $? = 0 -o $? = 141; }
+
+if [ "$preview_images" = "True" ]; then
+	case "$mimetype" in
+		image/*)
+			exit 7;;
+	esac
+fi
 
 case "$extension" in
     # Archive extensions:
