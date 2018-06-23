@@ -6,6 +6,7 @@ if [ -f /etc/bashrc ]; then
 fi
 
 export PATH=~/.scripts:$PATH
+#set -o vi
 
 
 # User specific aliases and functions
@@ -43,3 +44,5 @@ complete -c man
 alias muzika="ncmpcpp"
 #
 export VISUAL="vim"
+
+alias dmenu="dmenu -nb '#101010' -nf '#ddd' -sb '#385e6b' -sf '#101010'"

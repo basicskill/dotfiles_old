@@ -1,14 +1,3 @@
-shell mkdir fuzyy
-rename static-neural.pdf
-mkdir prezentacija
-mkdir ekspl
-open_with scim
-shell cp ~/Documents/templejt.tex sperg.tex
-rename adasd
-rename zzr.jpg
-rename IMG-20180505-WA0000.jpg
-shell cp ~/Documents/templejt.tex temp.tex
-cd genetski-algoritam-v0.2.pdf
 jjjkh
 rename genetski-algoritam-v0.2.pdf
 rename verzije-maturski
@@ -28,7 +17,6 @@ rename problem-dve-lepe-koverte.html
 rename problem-dve-koverte-v1.1.html
 rename yt_downloader.py
 search scri
-bulkrename 
 mkdir -p Goblini/Binarni svet
 rename Goblini
 search dot
@@ -37,14 +25,26 @@ search block
 mkdir jpeterson
 search jpe
 search ncm
-search scr
 bulkrename<C-r>
 bulkrename
 rename 
 rename templejt.tex
-search i3
-search 
 search scripl
-open_with 
 find f
+search gimp
+search gim
+open_with 
+bulkrename 
+rename Matura
+search 
+search i3
+mkdir zbirke
+rename hica.jpg
+mkdir -p gimp/muvokaust
+rename gimp
+rename jana.png
+rename jana.jpg
+rename janazi.xcf
+mkdir src
+search scr
 delete

@@ -1,0 +1,9 @@
+#! /bin/bash
+
+eval $(xdotool getmouselocation --shell)
+
+if [  $Y == 767 ]; then
+	xte 'mousemove 682 383'
+else
+	xte 'mousemove 1365 767'
+fi

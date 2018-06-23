@@ -6,6 +6,8 @@ set $mod Mod4
 set $browser qutebrowser
 set $term urxvt -bc -uc
 set $muzika ncmpcpp
+set $dmenu dmenu -nb '#101010' -nf '#ddd' -sb '#385e6b' -sf '#101010'
+set $dmenu_run dmenu_run -nb '#101010' -nf '#ddd' -sb '#385e6b' -sf '#101010'
 
 ####################### prozori  ######################
 # Gapovi
@@ -56,7 +58,6 @@ bindsym $mod+c split h
 # vertihalno deljenje
 bindsym $mod+v split v
 
-#client.focused #000000 #aaa555 #aaa555 
 
 ####################### workspace  ######################
 # We use variables to avoid repeating the names in multiple places.
@@ -100,13 +101,12 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 bindsym $mod+Shift+r exec pkill compton && xrdb ~/.Xdefaults;; restart reload 
 
 # Shutdown
-bindsym $Mod+Shift+e exec iskljuci $(echo -e "quit\nreboot\nexit" | dmenu)
-
+bindsym $Mod+Shift+e exec iskljuci $(echo -e "quit\nreboot\nexit" | $dmenu)
 bar {
-        status_command i3blocks
+	status_command i3blocks
 	colors {
-		focused_workspace #777777 #000000 #ccc555
-		inactive_workspace #000000 #000000 #ccc555
+		focused_workspace  #000000 #000000 #dddddd
+		inactive_workspace #000000 #000000 #385e6b
 	}
 }
 ####################### startap ######################
@@ -131,7 +131,7 @@ exec --no-startup-id $term -name updejt -e tmux new -s updejt
 
 ####################### bajndovi ######################
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run
+bindsym $mod+d exec $dmenu_run
 
 # start a terminal
 bindsym $mod+Return exec $term
@@ -178,3 +178,12 @@ bindsym $mod+Shift+u [instance="updejt"] scratchpad show;[instance="updejt"] mov
 
 # mountovanje
 bindsym F9 exec dmenumount
+
+# lock
+bindsym $mod+Shift+x exec lock
+
+# mis
+bindsym $mod+grave exec mrdaj_mis
+
+# floating
+bindsym $mod+space floating toggle

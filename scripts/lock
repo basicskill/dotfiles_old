@@ -1,0 +1,9 @@
+#! /bin/bash
+
+scrot /tmp/ekran.png
+[[ -f ~/.config/i3/lock.png ]] && convert /tmp/ekran.png -paint 1 -swirl -360 ~/.config/i3/lock.png -gravity center -composite -matte /tmp/ekran.png
+
+# muzika
+mpc pause
+
+i3lock -e -f -c 000000 -i /tmp/ekran.png
