@@ -1,0 +1,27 @@
+#! /bin/bash
+
+unos=$1
+
+case $unos in 
+	vb)
+		grad=vrnjacka-banja
+		;;
+
+	bg) 
+		grad=Belgrade
+		;;
+
+	kv)
+		grad=Kraljevo
+		;;
+	
+	va) 
+		grad=Valjevo
+		;;
+
+	*)
+		grad=$unos
+		;;
+esac
+
+curl wttr.in/$grad

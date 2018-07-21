@@ -1,25 +1,3 @@
-jjjkh
-rename genetski-algoritam-v0.2.pdf
-rename verzije-maturski
-rename gen-doktorat
-rename aerodinamika.pdf
-mkdir nepotrebni
-rename prolecni.pdf
-rename novi-predlog.pdf
-rename predlog-v1.1.pdf
-open_with ncmpcpp
-mkdir Music
-rename .dotfiles/
-search font
-search mpd
-shell cp ~/Documents/templejt.tex formule.tex
-rename problem-dve-lepe-koverte.html
-rename problem-dve-koverte-v1.1.html
-rename yt_downloader.py
-search scri
-mkdir -p Goblini/Binarni svet
-rename Goblini
-search dot
 search block
 
 mkdir jpeterson
@@ -33,11 +11,9 @@ search scripl
 find f
 search gimp
 search gim
-open_with 
 bulkrename 
 rename Matura
 search 
-search i3
 mkdir zbirke
 rename hica.jpg
 mkdir -p gimp/muvokaust
@@ -47,4 +23,28 @@ rename jana.jpg
 rename janazi.xcf
 mkdir src
 search scr
+search dot
+search x
+open_with vim
+rename i3blocks.conf
+search 3
+search i3
+search local
+search loca
+search cac
+search cach
+deleteC
+rename lista.pdf
+rename fon.pdf
+mkdir 
+mkdir treeRNN
+rename ABriefSurvey.pdf
+rename RankovanjeMulti-doc.pdf
+mkdir reference
+search vim
+search scri
+rename probni.py
+rename main.pdf
+rename Referentni.pdf
 delete
+open_with 

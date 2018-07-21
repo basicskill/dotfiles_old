@@ -12,9 +12,11 @@ set $dmenu_run dmenu_run -nb '#101010' -nf '#ddd' -sb '#385e6b' -sf '#101010'
 ####################### prozori  ######################
 # Gapovi
 gaps inner 10
+#0
 
 # lajsna
 new_window pixel 2
+#7
 
 # change focus
 bindsym $mod+h focus left
@@ -41,10 +43,10 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # resize window (you can also use the mouse for that)
-bindsym $Mod+p resize grow width 10 px or 10 ppt
-bindsym $Mod+i resize grow height 10 px or 10 ppt
-bindsym $Mod+o resize shrink height 10 px or 10 ppt
-bindsym $Mod+u resize shrink width 10 px or 10 ppt
+bindsym $Mod+Shift+p resize grow width 10 px or 10 ppt
+bindsym $Mod+Shift+i resize grow height 10 px or 10 ppt
+bindsym $Mod+Shift+o resize shrink height 10 px or 10 ppt
+bindsym $Mod+Shift+u resize shrink width 10 px or 10 ppt
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -174,7 +176,7 @@ bindsym $Mod+Shift+s gaps inner current minus 5
 bindsym $mod+m exec $term -e $muzika
 
 # Skrecped
-bindsym $mod+Shift+u [instance="updejt"] scratchpad show;[instance="updejt"] move position center
+bindsym $mod+u [instance="updejt"] scratchpad show;[instance="updejt"] move position center
 
 # mountovanje
 bindsym F9 exec dmenumount
@@ -187,3 +189,18 @@ bindsym $mod+grave exec mrdaj_mis
 
 # floating
 bindsym $mod+space floating toggle
+
+#------------------------#
+
+# help
+bindsym F1 exec --no-startup-id zathura ~/projekti/help/i3_help.pdf 
+
+#bindsym $mod+a exec firefox
+#gc
+bindsym $mod+Shift+b exec google-chrome-stable
+
+# ekrani
+bindsym F8 exec arandr
+
+# pornbutton
+#bindsym $mod+equal exec

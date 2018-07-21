@@ -35,6 +35,7 @@ c.url.searchengines = {
         'sh'      :    'https://sci-hub.tw/{}',
         'r'       :    'https://www.reddit.com/r/{}',
         'wa'      :    'https://www.wolframalpha.com/input/?i={}',
+        'w'       :    'http://wttr.in/{}',
 }
 
 c.url.start_pages = ['file:///home/mladen/.config/startpage/startpage.html']
@@ -42,6 +43,7 @@ c.url.start_pages = ['file:///home/mladen/.config/startpage/startpage.html']
 #~~~~~~~~~~~~~~~~~~~~~ Tabovi ~~~~~~~~~~~~~~~~~~~~~# 
 c.tabs.mousewheel_switching = False
 c.tabs.new_position.unrelated = 'next'
+config.bind('D', 'tab-close')
 
 
 #~~~~~~~~~~~~~~~~~~~~~ UNBajndovi ~~~~~~~~~~~~~~~~~~~~~# 
@@ -61,7 +63,7 @@ config.bind('.', 'repeat-command')
 config.bind('/', 'set-cmd-text /')
 config.bind(':', 'set-cmd-text :')
 config.bind('=', 'zoom')
-config.bind('?', 'help')
+#config.bind('?', 'help')
 config.bind('@', 'run-macro')
 config.bind('`', 'enter-mode set_mark')
 config.bind('{{', 'navigate prev -t')
@@ -78,7 +80,7 @@ config.bind(';i', 'hint images')
 config.bind(';y', 'hint links yank')
 
 config.bind(';t', 'hint inputs')
-config.bind('>', 'hint inputs')
+config.bind(',', 'hint inputs')
 config.bind('I', 'hint inputs ;; a')
 
 # Ctrl
@@ -140,7 +142,6 @@ config.bind('O', 'set-cmd-text -s :open -t')
 
 
 config.bind('co', 'tab-only')
-config.bind('D', 'tab-close')
 config.bind('cd', 'download-clear')
 config.bind('f', 'hint')
 config.bind('T', 'tab-move -1 ;; open -t')

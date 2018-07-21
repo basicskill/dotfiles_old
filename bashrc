@@ -8,13 +8,16 @@ fi
 export PATH=~/.scripts:$PATH
 #set -o vi
 
+# Use bash-completion, if available
+[[ $PS1 && -f /usr/share/bash-completion/bash_completion ]] && \
+    . /usr/share/bash-completion/bash_completion
 
 # User specific aliases and functions
 alias ll="ls -alh --color"
 alias ls="ls -lh --color"
 alias v="vim"
 alias sv="sudo vim"
-alias p="python"
+alias p="ipython"
 alias sp="sudo python"
 
 # Sudo
@@ -46,3 +49,8 @@ alias muzika="ncmpcpp"
 export VISUAL="vim"
 
 alias dmenu="dmenu -nb '#101010' -nf '#ddd' -sb '#385e6b' -sf '#101010'"
+
+
+
+# tmp!
+alias pch="Downloads/pycharm/bin/pycharm.sh"
