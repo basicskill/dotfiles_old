@@ -5,9 +5,10 @@ font pango:DejaVu Sans Mono 8
 set $mod Mod4
 set $browser qutebrowser
 set $term urxvt -bc -uc
-set $muzika ncmpcpp
+set $muzika cmus
 set $dmenu dmenu -nb '#101010' -nf '#ddd' -sb '#385e6b' -sf '#101010'
 set $dmenu_run dmenu_run -nb '#101010' -nf '#ddd' -sb '#385e6b' -sf '#101010'
+set $sound_jump 3
 
 ####################### prozori  ######################
 # Gapovi
@@ -123,11 +124,17 @@ exec_always --no-startup-id mpd
 exec_always --no-startup-id xset r rate 250 30
 
 # skrecped
-# updejt
+##### Leteci prozori
 for_window [instance="updejt"] floating enable
 for_window [instance="updejt"] resize set 920 550
 for_window [instance="updejt"] move scratchpad
 for_window [instance="updejt"] border pixel 5
+for_window [instance="arandr"] floating enable
+for_window [instance="wifi"] floating enable
+for_window [instance="cheese"] floating enable
+for_window [instance="transmission-gtk"] floating enable
+
+# updejt
 exec --no-startup-id $term -name updejt -e tmux new -s updejt
 
 
@@ -148,25 +155,22 @@ bindsym mod1+c exec xkb-swap
 bindsym $Mod+e exec $term -e ranger
 
 # Network 
-bindsym $mod+w exec $term -e nmtui
+bindsym $mod+w exec $term -name wifi -e nmtui
 
 # Skrinshot 
-bindsym XF86WebCam exec maim -s | xclip -selection clipboard -t image/png
-bindsym Ctrl+XF86WebCam exec maim -s > /tmp/slika.png
+bindsym Print exec maim -s | xclip -selection clipboard -t image/png
+bindsym Ctrl+Print exec maim -s > /tmp/slika.png
 
 #zvuk 
-bindsym XF86AudioRaiseVolume exec amixer -q sset Master unmute 1%+
-bindsym XF86AudioLowerVolume exec amixer -q sset Master unmute 1%-
-bindsym XF86AudioMute exec amixer -q sset Master unmute; exec  amixer -q sset Speaker unmute
-
-bindsym F12 exec amixer -q sset Master unmute 1%+
-bindsym F11 exec amixer -q sset Master unmute 1%-
-bindsym F10 exec amixer -q sset Master mute 
+bindsym XF86AudioRaiseVolume exec amixer -q sset Master $sound_jump%+
+bindsym XF86AudioLowerVolume exec amixer -q sset Master $sound_jump%-
+bindsym XF86AudioMute exec amixer -q set Master toggle 
+bindsym XF86AudioMicMute exec amixer set Capture toggle
 
 bindsym $mod+n exec $term -e alsamixer
 
 #No gap
-bindsym F4 gaps inner current set 0; gaps outer current set 0
+bindsym $mod+Escape gaps inner current set 0; gaps outer current set 0
 
 #Gaps +-
 bindsym $Mod+s gaps inner current plus 5
@@ -179,10 +183,10 @@ bindsym $mod+m exec $term -e $muzika
 bindsym $mod+u [instance="updejt"] scratchpad show;[instance="updejt"] move position center
 
 # mountovanje
-bindsym F9 exec dmenumount
+bindsym XF86Launch1 exec dmenumount
 
 # lock
-bindsym $mod+Shift+x exec lock
+bindsym XF86ScreenSaver exec lock
 
 # mis
 bindsym $mod+grave exec mrdaj_mis
@@ -193,14 +197,16 @@ bindsym $mod+space floating toggle
 #------------------------#
 
 # help
-bindsym F1 exec --no-startup-id zathura ~/projekti/help/i3_help.pdf 
+#bindsym F1 exec --no-startup-id zathura ~/projekti/help/i3_help.pdf 
 
 #bindsym $mod+a exec firefox
 #gc
 bindsym $mod+Shift+b exec google-chrome-stable
 
 # ekrani
-bindsym F8 exec arandr
+bindsym XF86Display exec arandr
 
-# pornbutton
-#bindsym $mod+equal exec
+# brightness
+bindsym XF86MonBrightnessDown exec mod-backlight -200
+bindsym XF86MonBrightnessUp exec mod-backlight +200
+bindsym XF86WebCam exec cheese

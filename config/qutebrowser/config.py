@@ -6,8 +6,8 @@ c.downloads.position = 'bottom'
 # nord boje
 # https://github.com/szorfein/dotfiles
 
-
-
+c.content.cookies.accept = 'all'
+c.colors.webpage.bg = 'black'
 
 
 nTab='file:///home/mladen/.config/startpage/startpage.html'
@@ -25,7 +25,7 @@ c.tabs.wrap = True
 c.url.default_page = '~/.config/startpage/startpage.html'
 
 c.url.searchengines = {
-        'DEFAULT' :    'https://google.com/search?q={}',
+        'DEFAULT' :    'https://duckduckgo.com/?q={}',
         'gh'      :    'https://github.com/search?q={}',
         'yt'      :    'https://youtube.com/results?search_query={}',
         'aw'      :    'https://wiki.archlinux.org/index.php/{}',
@@ -36,6 +36,7 @@ c.url.searchengines = {
         'r'       :    'https://www.reddit.com/r/{}',
         'wa'      :    'https://www.wolframalpha.com/input/?i={}',
         'w'       :    'http://wttr.in/{}',
+        'tw'      :    'https://www.thinkwiki.org/wiki/{}',
 }
 
 c.url.start_pages = ['file:///home/mladen/.config/startpage/startpage.html']
@@ -45,14 +46,38 @@ c.tabs.mousewheel_switching = False
 c.tabs.new_position.unrelated = 'next'
 config.bind('D', 'tab-close')
 
+#~~~~~~~~~~~~~~~~~~~~~ hintovi ~~~~~~~~~~~~~~~~~~~~~# 
+c.colors.hints.bg = 'black'
+c.colors.hints.fg = 'rgb(211, 220, 40)'
+c.colors.hints.match.fg = 'green'
+c.colors.keyhint.bg = 'rgba(0, 0, 0, 80%)'
+c.colors.keyhint.fg = '#FFFFFF'
+c.colors.keyhint.suffix.fg = '#FFFF00'
+
+#~~~~~~~~~~~~~~~~~~~~~ tabs colors ~~~~~~~~~~~~~~~~~~~~~# 
+c.colors.tabs.indicator.system = 'rgb'
+c.colors.tabs.bar.bg = 'black'
+c.colors.tabs.even.bg = '#595959'
+c.colors.tabs.even.fg = 'white'
+c.colors.tabs.odd.bg = '#373737'
+c.colors.tabs.odd.fg = 'white'
+c.colors.tabs.selected.even.bg = 'black'
+c.colors.tabs.selected.even.fg = 'white'
+c.colors.tabs.selected.odd.bg = 'black'
+c.colors.tabs.selected.odd.fg = 'white'
+
 
 #~~~~~~~~~~~~~~~~~~~~~ UNBajndovi ~~~~~~~~~~~~~~~~~~~~~# 
 config.unbind('d')
 config.unbind('m')
+
+#~~~~~~~~~~~~~~~~~~~~~ Download ~~~~~~~~~~~~~~~~~~~~~# 
+c.colors.tabs.indicator.error = '#ff0000'
+c.colors.tabs.indicator.start = '#0000aa'
+c.colors.tabs.indicator.stop = '#00aa00'
+
+
 #~~~~~~~~~~~~~~~~~~~~~ Bajndovi ~~~~~~~~~~~~~~~~~~~~~# 
-
-
-
 ## Bindings for normal mode
 
 ## Specijalni
@@ -110,18 +135,19 @@ config.bind('go', 'set-cmd-text :open {url:pretty}')
 
 config.bind('ge', 'open https://mail.google.com/mail/u/0/#inbox')
 config.bind('gm', 'open https://www.facebook.com/messages/t/')
-#config.bind('gi', 'open https://www.instagram.com/?hl=en')
+config.bind('gi', 'open https://www.instagram.com/?hl=en')
 config.bind('gd', 'open https://drive.google.com/drive/my-drive')
 config.bind('gw', 'open https://web.whatsapp.com/')
 config.bind('gy', 'open https://www.youtube.com/') 
+config.bind('ci', 'open https://www.integral-calculator.com/')
 
 # G (ruzno!!)
-config.bind('gtM', 'open -t https://mail.google.com/mail/u/0/#inbox')
-config.bind('gtm', 'open -t https://www.facebook.com/messages/t/')
-config.bind('gti', 'open -t https://www.instagram.com/?hl=en')
-config.bind('gtd', 'open -t https://drive.google.com/drive/my-drive')
-config.bind('gtw', 'open -t https://web.whatsapp.com/')
-config.bind('gty', 'open -t https://www.youtube.com/') 
+config.unbind('gtM')
+config.unbind('gtm')
+config.unbind('gti')
+config.unbind('gtd')
+config.unbind('gtw')
+config.unbind('gty')
 
 
 config.bind('wa', 'open https://www.wolframalpha.com/') # !!!

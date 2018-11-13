@@ -1,11 +1,16 @@
 # .bashrc
-
+# powerline-daemon -q
+# POWERLINE_BASH_CONTINUATION=1
+# POWERLINE_BASH_SELECT=1
+# . /usr/share/powerline/bindings/bash/powerline.sh
 # Source global definitions
 if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
 
 export PATH=~/.scripts:$PATH
+export PATH=~/.local/share/jdk1.8.0_181/bin:$PATH
+export PATH=~/.gem/ruby/2.5.0/bin:$PATH
 #set -o vi
 
 # Use bash-completion, if available
@@ -13,11 +18,13 @@ export PATH=~/.scripts:$PATH
     . /usr/share/bash-completion/bash_completion
 
 # User specific aliases and functions
-alias ll="ls -alh --color"
-alias ls="ls -lh --color"
+alias ll="ls -lh --color"
+alias ls="ls --color"
 alias v="vim"
 alias sv="sudo vim"
-alias p="ipython"
+alias pi="ipython"
+alias bp="bpython"
+alias p="python"
 alias sp="sudo python"
 
 # Sudo
@@ -48,9 +55,24 @@ alias muzika="ncmpcpp"
 #
 export VISUAL="vim"
 
-alias dmenu="dmenu -nb '#101010' -nf '#ddd' -sb '#385e6b' -sf '#101010'"
+
+# wd
+alias cw='cd projekti/tutovi/tensor_flow'
 
 
-
-# tmp!
-alias pch="Downloads/pycharm/bin/pycharm.sh"
+# added by Anaconda3 5.3.0 installer
+# >>> conda init >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$(CONDA_REPORT_ERRORS=false '/home/mladen/.anaconda3/bin/conda' shell.bash hook 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    \eval "$__conda_setup"
+else
+    if [ -f "/home/mladen/.anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/mladen/.anaconda3/etc/profile.d/conda.sh"
+        CONDA_CHANGEPS1=false conda activate base
+    else
+        \export PATH="/home/mladen/.anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda init <<<

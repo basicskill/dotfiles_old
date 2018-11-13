@@ -139,5 +139,13 @@ settings:
         <Return>: prompt-accept
         n: prompt-accept no
         y: prompt-accept yes
+  colors.webpage.bg:
+    global: white
+  content.proxy:
+    global: system
   content.user_stylesheets:
     global: null
+  tabs.position:
+    global: top
+  zoom.default:
+    global: 90%
